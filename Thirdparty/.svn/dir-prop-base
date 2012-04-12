@@ -1,0 +1,11 @@
+K 10
+svn:ignore
+V 76
+CMakeFiles
+Makefile
+progress.make
+cmake_install.cmake
+CMakeCache.txt
+lib*.a
+
+END

@@ -1,0 +1,1 @@
+/usr/bin/c++       CMakeFiles/iGPS.dir/GPSInstrument.cpp.o CMakeFiles/iGPS.dir/iGPSMain.cpp.o  -o ../../../MOOSBin/iGPS -rdynamic -L/home/ogutu/MOOS/MOOSBin ../../../MOOSBin/libMOOSUtility.a ../../../MOOSBin/libMOOS.a ../../../MOOSBin/libMOOSGen.a -lm -lpthread -Wl,-rpath,/home/ogutu/MOOS/MOOSBin: 

@@ -1,0 +1,92 @@
+10
+
+dir
+2376
+svn://login2.robots.ox.ac.uk/MOOS/trunk/Instruments/Ocean
+svn://login2.robots.ox.ac.uk/MOOS
+
+
+
+2008-09-29T17:50:42.887457Z
+2184
+arh
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+5f621d73-a7ea-4b79-bc62-7e07601040e3
+
+iJanitor
+dir
+
+iActuation
+dir
+
+iINS
+dir
+
+iLBL
+dir
+
+iADV
+dir
+
+iBattery
+dir
+
+iRelay
+dir
+
+iDepth
+dir
+
+CMakeLists.txt
+file
+
+
+
+
+2012-04-08T14:23:59.665867Z
+1900425059e43a4914612e5c6e995ecd
+2007-02-16T12:55:40.418866Z
+1166
+pnewman
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+73
+
+iCompass
+dir
+
+iDVL
+dir
+

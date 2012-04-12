@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/ogutu/MOOS/Docs/Essentials/Antler/code/C.cpp
+MOOSGenLib/MOOSGenLibGlobalHelper.h
+-
+
+Core/MOOSGenLib/MOOSGenLibGlobalHelper.h
+string
+-
+list
+-
+vector
+-
+sstream
+-
+algorithm
+-
+

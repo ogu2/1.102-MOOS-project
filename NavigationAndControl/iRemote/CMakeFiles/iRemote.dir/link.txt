@@ -1,0 +1,1 @@
+/usr/bin/c++       CMakeFiles/iRemote.dir/MOOSRemote.cpp.o CMakeFiles/iRemote.dir/iRemoteMain.cpp.o  -o ../../MOOSBin/iRemote -rdynamic -L/home/ogutu/MOOS/MOOSBin ../../MOOSBin/libMOOSUtility.a ../../MOOSBin/libMOOS.a ../../MOOSBin/libMOOSGen.a -lm -lpthread -Wl,-rpath,/home/ogutu/MOOS/MOOSBin: 

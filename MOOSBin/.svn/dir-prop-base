@@ -1,0 +1,30 @@
+K 10
+svn:ignore
+V 272
+MOOSDB
+iSerial
+iPlatform
+pScheduler
+iRelayBox
+pLogger
+uLaserSegmentViewer
+pAntler
+iLinguistics
+uDescribeImage
+uSMSView
+uALogParser
+iCommentary
+relaykill
+pBinaryCache
+iFireWireCamera
+iCamera
+pSE2CloudMatcher
+uMS
+pMOOSBridge
+uPlayBack
+OXMissions
+pPlatformSim
+shLMS3D
+lib*.a
+
+END

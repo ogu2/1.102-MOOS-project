@@ -1,0 +1,18 @@
+K 10
+svn:ignore
+V 117
+CMakeFiles
+Makefile
+progress.make
+cmake_install.cmake
+CMakeCache.txt
+lib*.a
+bin
+obj
+Debug
+Release
+*.user
+*.aps
+*.eto
+
+END

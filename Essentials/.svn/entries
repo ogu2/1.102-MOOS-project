@@ -1,0 +1,77 @@
+10
+
+dir
+2376
+svn://login2.robots.ox.ac.uk/MOOS/trunk/Essentials
+svn://login2.robots.ox.ac.uk/MOOS
+
+
+
+2011-04-06T14:00:59.486631Z
+2374
+pnewman
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+5f621d73-a7ea-4b79-bc62-7e07601040e3
+
+pLogger
+dir
+
+pAntler
+dir
+
+MOOSUtilityLib
+dir
+
+pMOOSBridge
+dir
+
+CMakeLists.txt
+file
+
+
+
+
+2012-04-08T14:23:58.365867Z
+85a805517af55d141f110b568c6afee3
+2007-07-28T09:18:15.165749Z
+1590
+pnewman
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+80
+
+pScheduler
+dir
+

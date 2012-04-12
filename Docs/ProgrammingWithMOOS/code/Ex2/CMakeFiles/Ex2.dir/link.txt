@@ -1,0 +1,1 @@
+/usr/bin/c++       CMakeFiles/Ex2.dir/SimpleApp.cpp.o CMakeFiles/Ex2.dir/main.cpp.o  -o ../../../../MOOSBin/Ex2 -rdynamic -L/home/ogutu/MOOS/MOOSBin ../../../../MOOSBin/libMOOSUtility.a ../../../../MOOSBin/libMOOS.a ../../../../MOOSBin/libMOOSGen.a -lm -lpthread -Wl,-rpath,/home/ogutu/MOOS/MOOSBin 

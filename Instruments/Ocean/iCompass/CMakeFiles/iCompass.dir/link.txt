@@ -1,0 +1,1 @@
+/usr/bin/c++       CMakeFiles/iCompass.dir/CompassInstrument.cpp.o CMakeFiles/iCompass.dir/iCompassMain.cpp.o  -o ../../../MOOSBin/iCompass -rdynamic -L/home/ogutu/MOOS/MOOSBin ../../../MOOSBin/libMOOSUtility.a ../../../MOOSBin/libMOOS.a ../../../MOOSBin/libMOOSGen.a -lm -lpthread -Wl,-rpath,/home/ogutu/MOOS/MOOSBin 

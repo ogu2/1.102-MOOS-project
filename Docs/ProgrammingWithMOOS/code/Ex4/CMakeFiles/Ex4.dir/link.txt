@@ -1,0 +1,1 @@
+/usr/bin/c++       CMakeFiles/Ex4.dir/Simulator.cpp.o CMakeFiles/Ex4.dir/main.cpp.o  -o ../../../../MOOSBin/Ex4 -rdynamic -L/home/ogutu/MOOS/MOOSBin ../../../../MOOSBin/libMOOSUtility.a ../../../../MOOSBin/libMOOS.a ../../../../MOOSBin/libMOOSGen.a -lm -lpthread -Wl,-rpath,/home/ogutu/MOOS/MOOSBin 

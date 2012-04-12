@@ -1,0 +1,1 @@
+/usr/bin/c++       CMakeFiles/pHelm.dir/HelmApp.cpp.o CMakeFiles/pHelm.dir/HelmMain.cpp.o  -o ../../MOOSBin/pHelm -rdynamic -L/home/ogutu/MOOS/MOOSBin ../../MOOSBin/libMOOSTask.a ../../MOOSBin/libMOOSUtility.a ../../MOOSBin/libMOOS.a ../../MOOSBin/libMOOSGen.a -lm -lpthread ../../MOOSBin/libnewmat.a -Wl,-rpath,/home/ogutu/MOOS/MOOSBin: 

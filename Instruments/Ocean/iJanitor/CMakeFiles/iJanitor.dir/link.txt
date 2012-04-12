@@ -1,0 +1,1 @@
+/usr/bin/c++       CMakeFiles/iJanitor.dir/MOOSJanitor.cpp.o CMakeFiles/iJanitor.dir/iJanitorMain.cpp.o  -o ../../../MOOSBin/iJanitor -rdynamic -L/home/ogutu/MOOS/MOOSBin ../../../MOOSBin/libMOOSUtility.a ../../../MOOSBin/libMOOS.a ../../../MOOSBin/libMOOSGen.a -lm -lpthread -Wl,-rpath,/home/ogutu/MOOS/MOOSBin 

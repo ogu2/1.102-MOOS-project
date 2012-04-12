@@ -1,0 +1,2 @@
+/usr/bin/ar cr ../../MOOSBin/libfltkvw.a  CMakeFiles/fltkvw.dir/Flv_List.cxx.o CMakeFiles/fltkvw.dir/Flv_Style.cxx.o CMakeFiles/fltkvw.dir/Flv_Table.cxx.o
+/usr/bin/ranlib ../../MOOSBin/libfltkvw.a
