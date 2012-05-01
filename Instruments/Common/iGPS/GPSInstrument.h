@@ -42,6 +42,7 @@
 #endif // _MSC_VER > 1000
 
 #include <MOOSUtilityLib/MOOSGeodesy.h>
+#include <string>
 class CGPSInstrument : public CMOOSInstrument  
 {
 protected:
@@ -73,6 +74,7 @@ protected:
     bool ParseNMEAString(const std::string & sNMEAString, CGPSData & out_data);
     bool InitialiseSensor();
     bool Iterate();
+    void mysplit(const std::string & str, const std::string & delim, std::vector<std::string>& result);
     bool OnNewMail(MOOSMSG_LIST &NewMail);
     bool OnConnectToServer();
     bool OnStartUp();    

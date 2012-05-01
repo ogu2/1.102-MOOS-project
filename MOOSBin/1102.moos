@@ -32,7 +32,7 @@ ProcessConfig = ANTLER
 
 
     //crucial processes
-    Run = MOOSDB        @   NewConsole = true
+    Run = MOOSDB        @   NewConsole = false
   
    //this next line sets the executable paths explicitly
    //ExecutablePath = /home/ogutu/MOOS/MOOSBin

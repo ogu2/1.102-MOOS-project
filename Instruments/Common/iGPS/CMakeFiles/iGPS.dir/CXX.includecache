@@ -27,6 +27,8 @@ assert.h
 /home/ogutu/MOOS/Instruments/Common/iGPS/GPSInstrument.h
 MOOSUtilityLib/MOOSGeodesy.h
 -
+string
+-
 
 Core/MOOSGenLib/MOOSFileReader.h
 fstream

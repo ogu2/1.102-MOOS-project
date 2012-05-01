@@ -40,6 +40,8 @@
 #include <iomanip>
 #include <cstring>
 #include <assert.h>
+
+
 using namespace std;
 
 
@@ -71,6 +73,31 @@ bool CGPSInstrument::Iterate()
     return true;
 }
 
+void CGPSInstrument::mysplit(const std::string & str, const std::string & delim, std::vector<std::string>& result)
+{
+    size_t start_pos = 0;
+    size_t match_pos;
+    size_t substr_length;
+
+    while((match_pos = str.find(delim, start_pos)) != string::npos)
+    {
+        substr_length = match_pos - start_pos;
+
+        if (substr_length > 0)
+        {
+            result.push_back(str.substr(start_pos, substr_length));
+        }
+
+        start_pos = match_pos + delim.length();
+    }
+
+    substr_length = str.length() - start_pos;
+
+    if (substr_length > 0)
+    {
+        result.push_back(str.substr(start_pos, substr_length));
+    }
+}
 
 bool CGPSInstrument::OnStartUp()
 {
@@ -325,6 +352,34 @@ bool CGPSInstrument::GetData()
         double dfTimeNow = MOOSTime();
 
         //MOOSTrace("Rx:  %s",sWhat.c_str());
+
+        vector<string> tokens;
+        const string sWhatcopy=sWhat;
+        mysplit(sWhatcopy, ",", tokens);
+
+		for(int i = 0; i < (int)tokens.size(); ++i)
+		{
+			//MOOSTrace("%d:\t%s\n",i,tokens[i].c_str());
+		}
+
+		//trick moosDB by changing code to GGA (default expected)
+        stringstream gga;
+        if(tokens.size()>17)
+        	{gga<<"$GPGGA,"<<tokens[1]<<","<<tokens[12]<<",N,";//time then latitude
+        gga<<tokens[13]<<",W,";//longitude
+
+        //quality check
+
+        if(tokens[17].compare("FIX")==0||tokens[16].compare("0")!=0){//system error
+        	gga<<"1,";
+        }else{
+        	gga<<"0,";
+        }
+        gga<<"4,,,M,,M,";//number of sats(4),hor dilution,altitude,height of geoid
+        gga<<",*47";//stuff and checksum(begining with *) <-fixed here
+        sWhat=gga.str();
+        	}
+        gga.clear();
         //SetMOOSVar("david",sWhat,dfTimeNow);
         if(PublishRaw())
         {
@@ -409,8 +464,8 @@ bool CGPSInstrument::ParseNMEAString(const std::string &sNMEAString, CGPSData & 
         // First of all, is this a good NMEA string?
         if(!DoNMEACheckSum(sNMEAString))
         {
-            MOOSDebugWrite("GPS Failed NMEA check sum");
-            return false;
+            //TODO:MOOSDebugWrite("GPS Failed NMEA check sum");
+            //return false;
         }
 
         // Begin to extract data
