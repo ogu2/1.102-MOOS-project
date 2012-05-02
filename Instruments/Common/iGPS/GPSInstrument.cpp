@@ -361,11 +361,13 @@ bool CGPSInstrument::GetData()
 		{
 			//MOOSTrace("%d:\t%s\n",i,tokens[i].c_str());
 		}
-
+		MOOSTrace("%s\n",tokens[12].c_str());
 		//trick moosDB by changing code to GGA (default expected)
         stringstream gga;
         if(tokens.size()>17)
-        	{gga<<"$GPGGA,"<<tokens[1]<<","<<tokens[12]<<",N,";//time then latitude
+        	{gga<<"$GPGGA,"<<tokens[1].substr(0,2)<<tokens[1].substr(3,2)
+        	<<tokens[1].substr(6,2)	//time
+        	<<","<<tokens[12]<<",N,";//latitude
         gga<<tokens[13]<<",W,";//longitude
 
         //quality check
@@ -375,12 +377,14 @@ bool CGPSInstrument::GetData()
         }else{
         	gga<<"0,";
         }
-        gga<<"4,,,M,,M,";//number of sats(4),hor dilution,altitude,height of geoid
-        gga<<",*47";//stuff and checksum(begining with *) <-fixed here
+        gga<<"4,0.0,10,M,-34.0,M,";//number of sats(4),hor dilution,altitude,height of geoid
+        gga<<",*47\n";//<<std::endl;//stuff and checksum(begining with *) <-fixed here
         sWhat=gga.str();
         	}
         gga.clear();
         //SetMOOSVar("david",sWhat,dfTimeNow);
+        SetMOOSVar("Raw",sWhat,dfTimeNow);
+        //MOOSTrace(sWhat.c_str());
         if(PublishRaw())
         {
             SetMOOSVar("Raw",sWhat,dfTimeNow);
@@ -411,8 +415,14 @@ bool CGPSInstrument::GetData()
                 {
                     SetMOOSVar("N", dfNLocal, dfTimeNow);
                     SetMOOSVar("E", dfELocal, dfTimeNow);
+
+                    //MOOSTrace("NOT combined messages");
+                    //GetMOOSVar("N")
                 }
                 buf << ",N=" << dfNLocal << ",E=" << dfELocal;
+                std::ostringstream myNLogabble_str;
+                myNLogabble_str<<2.23;
+               // MOOSTrace(buf.str().append("\n").c_str());
             }
 
             double dfXLocal, dfYLocal;

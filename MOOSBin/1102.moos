@@ -38,10 +38,10 @@ ProcessConfig = ANTLER
    //ExecutablePath = /home/ogutu/MOOS/MOOSBin
    	//ExecutablePath = SYSTEMPATH
 
-   //this uses system the path
    	Run = iGPS @ NewConsole = TRUE
-   //thsi sets how quickly processes are launched in milliseconds
-   MSBetweenLaunches = 200
+	Run = pLogger @ NewConsole = TRUE
+	
+	MSBetweenLaunches = 200
    
 }
  
@@ -59,7 +59,7 @@ ProcessConfig = pLogger
 
     //what is the stem name you wish all log files
     //to adopt ?
-    File        = SLAMDev
+    File        = Ogut2
 
     // where do you want the files to be placed
     // don't forget the trailinbg slash and to ensure
@@ -87,16 +87,21 @@ ProcessConfig = pLogger
     // a log files. Teh freqeuncy of slog entries
     // is determined by the SyncLog variable
 
-    Log     = DB_TIME @ 0
+	Log     = DB_TIME @ 0
+	Log	= Y @ 0
+	Log	= X @ 0
+	Log	= Satellites @ 0
+	Log	= GPS @ 0
 
 }
 
 
 ProcessConfig = iGPS
 {
-PORT = /dev/ttyUSB0
-BAUDRATE = 115200
-LatOrigin = 20
-CombinedMessages = TRUE
-
+	PORT = /dev/ttyUSB0
+	BAUDRATE = 115200
+	LatOrigin = 20
+	CombinedMessages = TRUE
+	PUBLISHRAW = TRUE
+	CombineMessages = TRUE
 }
