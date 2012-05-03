@@ -1,3 +1,8 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% LOG FILE:       /home/ogutu/MOOS/MOOSdata/Ogut2/Ogut2._moos
+%% FILE OPENED ON  Thu May  3 13:58:06 2012
+%% LOGSTART               1336067886.36
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 /////////////////////////////////////////////////////////////////////////
 // This example MOOS file shows (will show) some of the configuration that
 // Core MOOS applications support. In time each application subdirectory 
@@ -109,6 +114,7 @@ ProcessConfig = iGPS
 	LatOrigin = 20
 	LongOrigin = -40
 	PUBLISHRAW = TRUE
-	CombineMessages = FALSE
+	CombineMessages = TRUE
 	
 }
+

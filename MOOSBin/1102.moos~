@@ -109,6 +109,6 @@ ProcessConfig = iGPS
 	LatOrigin = 20
 	LongOrigin = -40
 	PUBLISHRAW = TRUE
-	CombineMessages = FALSE
+	CombineMessages = TRUE
 	
 }

@@ -354,36 +354,47 @@ bool CGPSInstrument::GetData()
         //MOOSTrace("Rx:  %s",sWhat.c_str());
 
         vector<string> tokens;
+        /*these will help to quickly identify vars
+         *rather than using numbers
+         */
+        const int myLat=30, myLong=31,
+        		myTime=1, myGpsFix=35, mySysStat=34;
+
         const string sWhatcopy=sWhat;
         mysplit(sWhatcopy, ",", tokens);
 
-		for(int i = 0; i < (int)tokens.size(); ++i)
+		/*for(int i = 0; i < (int)tokens.size(); ++i)
 		{
 			//MOOSTrace("%d:\t%s\n",i,tokens[i].c_str());
+		}*/
+		if(tokens.size()>30){
+		//	MOOSTrace("%s\n",tokens[30].c_str());
 		}
-		MOOSTrace("%s\n",tokens[12].c_str());
+		else{
+			MOOSTrace("token size too small!");}
+
 		//trick moosDB by changing code to GGA (default expected)
         stringstream gga;
         if(tokens.size()>17)
-        	{gga<<"$GPGGA,"<<tokens[1].substr(0,2)<<tokens[1].substr(3,2)
-        	<<tokens[1].substr(6,2)	//time
-        	<<","<<tokens[12]<<",N,";//latitude
-        gga<<tokens[13]<<",W,";//longitude
+        	{gga<<"$GPGGA,"<<tokens[myTime].substr(0,2)<<tokens[myTime].substr(3,2)
+        	<<tokens[myTime].substr(6,2)	//time
+        	<<","<<tokens[myLat]<<",N,";//latitude
+        gga<<tokens[myLong]<<",W,";//longitude
 
         //quality check
 
-        if(tokens[17].compare("FIX")==0||tokens[16].compare("0")!=0){//system error
+        if(tokens[myGpsFix].compare("FIX")==0||tokens[mySysStat].compare("0")!=0){//system error
         	gga<<"1,";
         }else{
         	gga<<"0,";
         }
-        gga<<"4,0.0,10,M,-34.0,M,";//number of sats(4),hor dilution,altitude,height of geoid
-        gga<<",*47\n";//<<std::endl;//stuff and checksum(begining with *) <-fixed here
+        gga<<"04,1.0,10,M,-34.0,M,";//number of sats(4),hor dilution,altitude,height of geoid
+        gga<<",,*47\n";//<<std::endl;//stuff and checksum(begining with *) <-fixed here
         sWhat=gga.str();
         	}
         gga.clear();
-        //SetMOOSVar("david",sWhat,dfTimeNow);
-        SetMOOSVar("Raw",sWhat,dfTimeNow);
+
+        //SetMOOSVar("Raw",sWhat,dfTimeNow);
         //MOOSTrace(sWhat.c_str());
         if(PublishRaw())
         {
@@ -415,14 +426,8 @@ bool CGPSInstrument::GetData()
                 {
                     SetMOOSVar("N", dfNLocal, dfTimeNow);
                     SetMOOSVar("E", dfELocal, dfTimeNow);
-
-                    //MOOSTrace("NOT combined messages");
-                    //GetMOOSVar("N")
                 }
                 buf << ",N=" << dfNLocal << ",E=" << dfELocal;
-                std::ostringstream myNLogabble_str;
-                myNLogabble_str<<2.23;
-               // MOOSTrace(buf.str().append("\n").c_str());
             }
 
             double dfXLocal, dfYLocal;
@@ -434,16 +439,18 @@ bool CGPSInstrument::GetData()
                     SetMOOSVar("Y", dfYLocal, dfTimeNow);
                 }
                 buf << ",X=" << dfXLocal << ",Y=" << dfYLocal;
+
             }
 
         }
-
         // Always say how many satellites we have
         SetMOOSVar("Satellites", data.nSatellites, dfTimeNow);
         buf << ",Sats=" << setprecision(0) << data.nSatellites;
 
         if (m_bCombineMessages)
             SetMOOSVar("GPS", buf.str(), dfTimeNow);
+        PublishData();
+        PublishRaw();
     }
     else
     {

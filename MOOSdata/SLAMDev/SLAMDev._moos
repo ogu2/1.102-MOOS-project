@@ -1,3 +1,8 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% LOG FILE:       /home/ogutu/MOOS/MOOSdata/SLAMDev/SLAMDev._moos
+%% FILE OPENED ON  Tue May  1 19:38:31 2012
+%% LOGSTART               1335915511.18
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 /////////////////////////////////////////////////////////////////////////
 // This example MOOS file shows (will show) some of the configuration that
 // Core MOOS applications support. In time each application subdirectory 
@@ -17,7 +22,7 @@ ServerPort = 9000
 Simulator = false
 
 //all connected process can be tagged as belonging to a named community
-Community = 1102
+Community = AnExample
 
 
 //////////////////////////////////
@@ -40,8 +45,7 @@ ProcessConfig = ANTLER
 
    	Run = iGPS @ NewConsole = TRUE
 	Run = pLogger @ NewConsole = TRUE
-	
-	MSBetweenLaunches = 2000
+   MSBetweenLaunches = 200
    
 }
  
@@ -59,13 +63,13 @@ ProcessConfig = pLogger
 
     //what is the stem name you wish all log files
     //to adopt ?
-    File        = Ogut2
+    File        = SLAMDev
 
     // where do you want the files to be placed
     // don't forget the trailinbg slash and to ensure
     // the directory exists (you'll be warned if there
     // is a problem
-    PATH        = /home/ogutu/MOOS/MOOSdata/
+    PATH        = /home/ogutu/MOOS/MOOSdata
 
     // do you want to generate a synchronous (slog) file
     // how often (number in seconds after @ ) 
@@ -87,28 +91,17 @@ ProcessConfig = pLogger
     // a log files. Teh freqeuncy of slog entries
     // is determined by the SyncLog variable
 
-	Log     = DB_TIME @ 0
-//	Log	= Y @ 0
-//	Log	= X @ 0
-//	Log	= Satellites @ 0
-//	Log	= GPS @ 0
-	Log	= GPS @ 5
-	Log	= GPS_X @ 5
-	Log	= GPS_Y @ 5
-	Log	= GPS_E @ 5
-	Log	= GPS_N @ 5
-	//Log 	= david @10
+    Log     = DB_TIME @ 0
 
 }
 
 
 ProcessConfig = iGPS
 {
-	PORT = /dev/ttyUSB0
-	BAUDRATE = 115200
-	LatOrigin = 20
-	LongOrigin = -40
-	PUBLISHRAW = TRUE
-	CombineMessages = FALSE
-	
+PORT = /dev/ttyUSB0
+BAUDRATE = 115200
+LatOrigin = 20
+CombinedMessages = TRUE
+
 }
+
