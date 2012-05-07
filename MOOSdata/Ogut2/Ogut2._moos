@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% LOG FILE:       /home/ogutu/MOOS/MOOSdata/Ogut2/Ogut2._moos
-%% FILE OPENED ON  Thu May  3 13:58:06 2012
-%% LOGSTART               1336067886.36
+%% FILE OPENED ON  Sun May  6 20:57:32 2012
+%% LOGSTART               1336352252.33
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 /////////////////////////////////////////////////////////////////////////
 // This example MOOS file shows (will show) some of the configuration that
@@ -40,12 +40,12 @@ ProcessConfig = ANTLER
     Run = MOOSDB        @   NewConsole = false
   
    //this next line sets the executable paths explicitly
-   //ExecutablePath = /home/ogutu/MOOS/MOOSBin
+   ExecutablePath = /home/ogutu/MOOS/MOOSBin
    	//ExecutablePath = SYSTEMPATH
 
    	Run = iGPS @ NewConsole = TRUE
 	Run = pLogger @ NewConsole = TRUE
-	
+	Run = uMS @ NewConsole = TRUE
 	MSBetweenLaunches = 2000
    
 }
@@ -102,7 +102,27 @@ ProcessConfig = pLogger
 	Log	= GPS_Y @ 5
 	Log	= GPS_E @ 5
 	Log	= GPS_N @ 5
-	//Log 	= david @10
+	Log	= Heading @5
+	Log	= ADC1 @5
+	Log	= ADC2 @5
+	Log	= INSTEMP @5
+	Log	= RELHUM @5
+	Log	= BARP @5
+	Log	= VISILL @5
+	Log	= INFRARED @5
+	Log	= ACCX @5
+	Log	= ACCY @5
+	Log	= ACCZ @5
+	Log	= ROLLX @5
+	Log	= ROLLY @5
+	Log	= ROLLZ @5
+	Log	= FLUX_X @5
+	Log	= FLUX_Y @5
+	Log	= FLUX_Z @5
+	Log	= ACC2_X @5
+	Log	= ACC2_Y @5
+	Log	= ACC2_Z @5
+	Log	= GRNSPD @5
 
 }
 
@@ -114,7 +134,11 @@ ProcessConfig = iGPS
 	LatOrigin = 20
 	LongOrigin = -40
 	PUBLISHRAW = TRUE
-	CombineMessages = TRUE
+	CombineMessages = FALSE
 	
+}
+
+ProcessConfig = uMS
+{
 }
 

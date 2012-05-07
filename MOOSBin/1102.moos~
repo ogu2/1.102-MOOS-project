@@ -1,59 +1,25 @@
-/////////////////////////////////////////////////////////////////////////
-// This example MOOS file shows (will show) some of the configuration that
-// Core MOOS applications support. In time each application subdirectory 
-// will sport an Example.moos which will illustrate the configuration
-// options offered by that process
-/////////////////////////////////////////////////////////////////////////
-
-
-//name of the machine hosting the MOOSDB 
-//(can be an I.P address aswell as a FQDN)
 ServerHost = localhost
-
-//port DB listens on (make sure you are blocking the port you request)
 ServerPort = 9000
-
-//optional global simualtion flags (some processes use this to fake reality when required)
 Simulator = false
 
-//all connected process can be tagged as belonging to a named community
-Community = 1102
+Community = 1102	//that's 1.102
 
-
-//////////////////////////////////
-// pAntler configuration  block  //
-//////////////////////////////////
 ProcessConfig = ANTLER
 {
-    // pAntler launches processes for you
-    // you can specify whether or not each process gets a new window or not
-    // you can specify the name under which each process registers with MOOSDB
-    // Run = PROC_NAME @ [ NewConsole = [TRUE/FALSE] [~ MOOSNAME]]
+	Run = MOOSDB        @   NewConsole = false
 
-
-    //crucial processes
-    Run = MOOSDB        @   NewConsole = false
-  
-   //this next line sets the executable paths explicitly
-   //ExecutablePath = /home/ogutu/MOOS/MOOSBin
-   	//ExecutablePath = SYSTEMPATH
-
-   	Run = iGPS @ NewConsole = TRUE
-	Run = pLogger @ NewConsole = TRUE
+	//this next line sets the executable paths explicitly
+	ExecutablePath = /home/ogutu/MOOS/MOOSBin
 	
+	Run = iGPS @ NewConsole = TRUE
+	Run = pLogger @ NewConsole = TRUE
+	Run = uMS @ NewConsole = TRUE
 	MSBetweenLaunches = 2000
    
 }
- 
 
-
-//////////////////////////////////
-// Logger configuration  block  //
-//////////////////////////////////
 ProcessConfig = pLogger
 {
-    //over loading basic params...
-    //How often to run and how often to contact the MOOSDB
     AppTick     = 30.0
     CommsTick   = 30.0
 
@@ -67,14 +33,9 @@ ProcessConfig = pLogger
     // is a problem
     PATH        = /home/ogutu/MOOS/MOOSdata/
 
-    // do you want to generate a synchronous (slog) file
-    // how often (number in seconds after @ ) 
     SyncLog     = true @ 0.2
-
-    // do you want to generate an alog
     AsyncLog    = true
 
-    // do you want the stem name to be appended with a time stamp?
     FileTimeStamp   = false
 
 
@@ -88,16 +49,32 @@ ProcessConfig = pLogger
     // is determined by the SyncLog variable
 
 	Log     = DB_TIME @ 0
-//	Log	= Y @ 0
-//	Log	= X @ 0
-//	Log	= Satellites @ 0
-//	Log	= GPS @ 0
 	Log	= GPS @ 5
 	Log	= GPS_X @ 5
 	Log	= GPS_Y @ 5
 	Log	= GPS_E @ 5
 	Log	= GPS_N @ 5
-	//Log 	= david @10
+	Log	= Heading @5
+	Log	= ADC1 @5
+	Log	= ADC2 @5
+	Log	= INSTEMP @5
+	Log	= RELHUM @5
+	Log	= BARP @5
+	Log	= VISILL @5
+	Log	= INFRARED @5
+	Log	= ACCX @5
+	Log	= ACCY @5
+	Log	= ACCZ @5
+	Log	= ROLLX @5
+	Log	= ROLLY @5
+	Log	= ROLLZ @5
+	Log	= FLUX_X @5
+	Log	= FLUX_Y @5
+	Log	= FLUX_Z @5
+	Log	= ACC2_X @5
+	Log	= ACC2_Y @5
+	Log	= ACC2_Z @5
+	Log	= GRNSPD @5
 
 }
 
@@ -109,6 +86,10 @@ ProcessConfig = iGPS
 	LatOrigin = 20
 	LongOrigin = -40
 	PUBLISHRAW = TRUE
-	CombineMessages = TRUE
+	CombineMessages = FALSE
 	
+}
+
+ProcessConfig = uMS
+{
 }

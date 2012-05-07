@@ -382,7 +382,7 @@ bool CGPSInstrument::GetData()
          */
         const int myLat=30, myLong=31,
         		myTime=1, myGpsFix=35, mySysStat=34,
-        		myHeading=33,myAcc_x=7,myAcc_y=8,myAcc_z=9,
+        		myHeading=33,myAcc_x=15,myAcc_y=16,myAcc_z=17,
         		myRoll_x=19,myRoll_y=20,myRoll_z=21,
         		myFlux_x=23,myFlux_y=24,myFlux_z=25,
         		myAcc2_x=27,myAcc2_y=28,myAcc2_z=29,
@@ -417,15 +417,12 @@ bool CGPSInstrument::GetData()
 			SetMOOSVar("ACC2_Y",tokens[myAcc2_y],dfTimeNow);
 			SetMOOSVar("ACC2_Z",tokens[myAcc2_z],dfTimeNow);
 			SetMOOSVar("GRNSPD",tokens[myGroundSpeed],dfTimeNow);
-			SetMOOSVar("",tokens[],dfTimeNow);
+			//SetMOOSVar("",tokens[],dfTimeNow);
 
 		}
 		else{
 			MOOSTrace("token size too small!");
 		}
-
-
-
 
 		//trick moosDB by changing code to GGA (default expected)
         stringstream gga;
