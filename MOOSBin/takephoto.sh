@@ -1,5 +1,5 @@
 #!/bin/bash
-WEBCAM=/dev/video0
+WEBCAM=/dev/video1
 ERROR_LOG=elog.txt
 CURRENT_DIR=`pwd`
 DIRECTORY=~/missionphotos

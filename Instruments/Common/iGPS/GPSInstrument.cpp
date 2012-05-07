@@ -150,6 +150,8 @@ bool CGPSInstrument::OnStartUp()
 
     //here we make the variables that we are managing
     double dfGPSPeriod = 1.0;
+    double dfHeadingPeriod = 0.5;
+    double dfmyPublisherTime=1.0;
 
     //GPS update @ 2Hz
     if (m_bCombineMessages)
@@ -165,6 +167,27 @@ bool CGPSInstrument::OnStartUp()
         AddMOOSVariable("Satellites","","GPS_SAT",dfGPSPeriod);
     }
 
+    AddMOOSVariable("Heading",  "SIM_HEADING",  "COMPASS_HEADING",  dfHeadingPeriod);
+    AddMOOSVariable("ADC1","INSS_ADC1","INS_ADC1",dfmyPublisherTime);
+    AddMOOSVariable("ADC2","INSS_ADC2","INS_ADC2",dfmyPublisherTime);
+    AddMOOSVariable("INSTEMP","INSS_INSTEMP","INS_INSTEMP",dfmyPublisherTime);
+    AddMOOSVariable("RELHUM","INSS_RELHUM","INS_RELHUM",dfmyPublisherTime);
+    AddMOOSVariable("BARP","INSS_BARP","INS_BARP",dfmyPublisherTime);
+    AddMOOSVariable("VISILL","INSS_VISILL","INS_VISILL",dfmyPublisherTime);
+    AddMOOSVariable("INFRARED","INSS_INFRARED","INS_INFRARED",dfmyPublisherTime);
+    AddMOOSVariable("ACCX","INSS_ACCX","INS_ACCX",dfmyPublisherTime);
+    AddMOOSVariable("ACCY","INSS_ACCY","INS_ACCY",dfmyPublisherTime);
+    AddMOOSVariable("ACCZ","INSS_ACCZ","INS_ACCZ",dfmyPublisherTime);
+    AddMOOSVariable("ROLLX","INSS_ROLLX","INS_ROLLX",dfmyPublisherTime);
+    AddMOOSVariable("ROLLY","INSS_ROLLY","INS_ROLLY",dfmyPublisherTime);
+    AddMOOSVariable("ROLLZ","INSS_ROLLZ","INS_ROLLZ",dfmyPublisherTime);
+    AddMOOSVariable("FLUX_X","INSS_FLUX_X","INS_FLUX_X",dfmyPublisherTime);
+    AddMOOSVariable("FLUX_Y","INSS_FLUX_Y","INS_FLUX_Y",dfmyPublisherTime);
+    AddMOOSVariable("FLUX_Z","INSS_FLUX_Z","INS_FLUX_Z",dfmyPublisherTime);
+    AddMOOSVariable("ACC2_X","INSS_ACC2_X","INS_ACC2_X",dfmyPublisherTime);
+    AddMOOSVariable("ACC2_Y","INSS_ACC2_Y","INS_ACC2_Y",dfmyPublisherTime);
+    AddMOOSVariable("ACC2_Z","INSS_ACC2_Z","INS_ACC2_Z",dfmyPublisherTime);
+    AddMOOSVariable("GRNSPD","INSS_GRNSPD","INS_GRNSPD",dfmyPublisherTime);
     AddMOOSVariable("Raw","","GPS_RAW",dfGPSPeriod);
 
 
@@ -358,20 +381,51 @@ bool CGPSInstrument::GetData()
          *rather than using numbers
          */
         const int myLat=30, myLong=31,
-        		myTime=1, myGpsFix=35, mySysStat=34;
+        		myTime=1, myGpsFix=35, mySysStat=34,
+        		myHeading=33,myAcc_x=7,myAcc_y=8,myAcc_z=9,
+        		myRoll_x=19,myRoll_y=20,myRoll_z=21,
+        		myFlux_x=23,myFlux_y=24,myFlux_z=25,
+        		myAcc2_x=27,myAcc2_y=28,myAcc2_z=29,
+        		myGroundSpeed=32,
+        		myADC1=3,myADC2=4, myTemp=6, myRelHum=8,
+        		myPressure=10, myVisIll=12, myIR=13;
 
         const string sWhatcopy=sWhat;
         mysplit(sWhatcopy, ",", tokens);
 
-		/*for(int i = 0; i < (int)tokens.size(); ++i)
-		{
-			//MOOSTrace("%d:\t%s\n",i,tokens[i].c_str());
-		}*/
 		if(tokens.size()>30){
-		//	MOOSTrace("%s\n",tokens[30].c_str());
+			//iCompas data provided by iGPS
+
+			SetMOOSVar("Heading",tokens[myHeading],dfTimeNow);//TODO:check if this angle needs to be changed
+			SetMOOSVar("ADC1",tokens[myADC1],dfTimeNow);
+			SetMOOSVar("ADC2",tokens[myADC2],dfTimeNow);
+			SetMOOSVar("INSTEMP",tokens[myTemp],dfTimeNow);
+			SetMOOSVar("RELHUM",tokens[myRelHum],dfTimeNow);
+			SetMOOSVar("BARP",tokens[myPressure],dfTimeNow);
+			SetMOOSVar("VISILL",tokens[myVisIll],dfTimeNow);
+			SetMOOSVar("INFRARED",tokens[myIR],dfTimeNow);
+			SetMOOSVar("ACCX",tokens[myAcc_x],dfTimeNow);
+			SetMOOSVar("ACCY",tokens[myAcc_y],dfTimeNow);
+			SetMOOSVar("ACCZ",tokens[myAcc_z],dfTimeNow);
+			SetMOOSVar("ROLLX",tokens[myRoll_x],dfTimeNow);// not rolex :D
+			SetMOOSVar("ROLLY",tokens[myRoll_y],dfTimeNow);
+			SetMOOSVar("ROLLZ",tokens[myRoll_z],dfTimeNow);
+			SetMOOSVar("FLUX_X",tokens[myFlux_x],dfTimeNow);
+			SetMOOSVar("FLUX_Y",tokens[myFlux_y],dfTimeNow);
+			SetMOOSVar("FLUX_Z",tokens[myFlux_z],dfTimeNow);
+			SetMOOSVar("ACC2_X",tokens[myAcc2_x],dfTimeNow);
+			SetMOOSVar("ACC2_Y",tokens[myAcc2_y],dfTimeNow);
+			SetMOOSVar("ACC2_Z",tokens[myAcc2_z],dfTimeNow);
+			SetMOOSVar("GRNSPD",tokens[myGroundSpeed],dfTimeNow);
+			SetMOOSVar("",tokens[],dfTimeNow);
+
 		}
 		else{
-			MOOSTrace("token size too small!");}
+			MOOSTrace("token size too small!");
+		}
+
+
+
 
 		//trick moosDB by changing code to GGA (default expected)
         stringstream gga;
