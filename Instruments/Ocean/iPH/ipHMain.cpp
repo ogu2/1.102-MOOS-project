@@ -30,7 +30,7 @@
 //////////////////////////    END_GPL    //////////////////////////////////
 #include <MOOSLIB/MOOSLib.h>
 
-#include "CompassInstrument.h"
+#include "pHInstrument.h"
 
 int main(int argc ,char * argv[])
 {
@@ -46,7 +46,7 @@ int main(int argc ,char * argv[])
 
     CCompassInstrument CompassInstrument;
 
-    CompassInstrument.Run("iCompass",sMissionFile);
+    CompassInstrument.Run("ipH",sMissionFile);
 
 
     return 0;

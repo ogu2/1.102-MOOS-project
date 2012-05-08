@@ -39,7 +39,7 @@
 #pragma once
 #endif // _MSC_VER > 1000
 
-class CCompassInstrument : public CMOOSInstrument  
+class CCompassInstrument : public CMOOSInstrument
 {
 public:
     CCompassInstrument();

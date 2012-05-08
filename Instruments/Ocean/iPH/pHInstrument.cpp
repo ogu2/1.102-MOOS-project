@@ -36,7 +36,7 @@
 
 #include <iostream>
 using namespace std;
-#include "CompassInstrument.h"
+#include "pHInstrument.h"
 
 //////////////////////////////////////////////////////////////////////
 // Construction/Destruction
