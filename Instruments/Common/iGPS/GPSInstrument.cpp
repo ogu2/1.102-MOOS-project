@@ -342,11 +342,6 @@ bool CGPSInstrument::InitialiseSensor()
 
 
 
-
-/**
-*
-*/
-
 bool CGPSInstrument::GetData()
 {
     if(!IsSimulateMode())
