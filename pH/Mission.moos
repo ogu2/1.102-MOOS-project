@@ -1,0 +1,31 @@
+// This is the smallest *.moos file you can imagine
+
+
+//  global variables anyone can use them
+//ServerHost = robots.ox.ac.uk
+ServerHost = localhost
+ServerPort = 9000
+
+
+// you can name tag processes connected to a particular
+// DB under a community name
+Community = V1
+
+ProcessConfig=ANTLER
+{
+Run = MOOSDB @NewConsole=true
+Run =iRemote @NewConsole=true
+Run = iActuation @NewConsole=true
+}
+
+
+ProcessConfig=iActuation
+{
+Port=com4
+Driver=ASC
+Verbose=true
+}
+
+
+//some processes look at this flag to see wether things are for real (or not)
+Simulator = false

@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/ogutu/MOOS/Instruments/Ocean/iPH/ipHMain.cpp
+MOOSLIB/MOOSLib.h
+-
+pHInstrument.h
+/home/ogutu/MOOS/Instruments/Ocean/iPH/pHInstrument.h
+
+/home/ogutu/MOOS/Instruments/Ocean/iPH/pHInstrument.cpp
+MOOSLIB/MOOSLib.h
+-
+iostream
+-
+pHInstrument.h
+/home/ogutu/MOOS/Instruments/Ocean/iPH/pHInstrument.h
+
+/home/ogutu/MOOS/Instruments/Ocean/iPH/pHInstrument.h
+

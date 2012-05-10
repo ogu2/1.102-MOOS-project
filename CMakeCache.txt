@@ -401,6 +401,9 @@ X11_ICE_INCLUDE_PATH:PATH=/usr/include
 //Path to a library.
 X11_ICE_LIB:FILEPATH=/usr/lib/i386-linux-gnu/libICE.so
 
+//Path to a file.
+X11_SM_INCLUDE_PATH:PATH=/usr/include
+
 //Path to a library.
 X11_SM_LIB:FILEPATH=/usr/lib/i386-linux-gnu/libSM.so
 
@@ -411,7 +414,16 @@ X11_X11_INCLUDE_PATH:PATH=/usr/include
 X11_X11_LIB:FILEPATH=/usr/lib/i386-linux-gnu/libX11.so
 
 //Path to a file.
+X11_XRes_INCLUDE_PATH:PATH=X11_XRes_INCLUDE_PATH-NOTFOUND
+
+//Path to a library.
+X11_XRes_LIB:FILEPATH=X11_XRes_LIB-NOTFOUND
+
+//Path to a file.
 X11_XShm_INCLUDE_PATH:PATH=/usr/include
+
+//Path to a file.
+X11_XSync_INCLUDE_PATH:PATH=/usr/include
 
 //Path to a file.
 X11_XTest_INCLUDE_PATH:PATH=X11_XTest_INCLUDE_PATH-NOTFOUND
@@ -490,6 +502,12 @@ X11_Xinput_LIB:FILEPATH=X11_Xinput_LIB-NOTFOUND
 
 //Path to a file.
 X11_Xkb_INCLUDE_PATH:PATH=/usr/include
+
+//Path to a file.
+X11_Xkbfile_INCLUDE_PATH:PATH=X11_Xkbfile_INCLUDE_PATH-NOTFOUND
+
+//Path to a library.
+X11_Xkbfile_LIB:FILEPATH=X11_Xkbfile_LIB-NOTFOUND
 
 //Path to a file.
 X11_Xkblib_INCLUDE_PATH:PATH=/usr/include
@@ -724,7 +742,7 @@ CMAKE_CACHE_MAJOR_VERSION:INTERNAL=2
 //Minor version of cmake used to create the current loaded cache
 CMAKE_CACHE_MINOR_VERSION:INTERNAL=8
 //Patch version of cmake used to create the current loaded cache
-CMAKE_CACHE_PATCH_VERSION:INTERNAL=5
+CMAKE_CACHE_PATCH_VERSION:INTERNAL=7
 //ADVANCED property for variable: CMAKE_COLOR_MAKEFILE
 CMAKE_COLOR_MAKEFILE-ADVANCED:INTERNAL=1
 //Path to CMake executable.
@@ -847,7 +865,7 @@ DISABLE_AUX_SOURCE-ADVANCED:INTERNAL=1
 //Details about finding OpenGL
 FIND_PACKAGE_MESSAGE_DETAILS_OpenGL:INTERNAL=[/usr/lib/i386-linux-gnu/libGL.so][v()]
 //Details about finding X11
-FIND_PACKAGE_MESSAGE_DETAILS_X11:INTERNAL=[/usr/lib/i386-linux-gnu/libX11.so][/usr/include;/usr/include;/usr/include;/usr/include;/usr/include;/usr/include;/usr/include;/usr/include;/usr/include;/usr/include]
+FIND_PACKAGE_MESSAGE_DETAILS_X11:INTERNAL=[/usr/lib/i386-linux-gnu/libX11.so][/usr/include;/usr/include;/usr/include;/usr/include;/usr/include;/usr/include;/usr/include;/usr/include;/usr/include;/usr/include;/usr/include]
 //ADVANCED property for variable: FLTK_BASE_LIBRARY
 FLTK_BASE_LIBRARY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: FLTK_CONFIG_SCRIPT
@@ -876,14 +894,22 @@ X11_ICE_INCLUDE_PATH-ADVANCED:INTERNAL=1
 X11_ICE_LIB-ADVANCED:INTERNAL=1
 //Have library /usr/lib/i386-linux-gnu/libX11.so;/usr/lib/i386-linux-gnu/libXext.so
 X11_LIB_X11_SOLO:INTERNAL=1
+//ADVANCED property for variable: X11_SM_INCLUDE_PATH
+X11_SM_INCLUDE_PATH-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: X11_SM_LIB
 X11_SM_LIB-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: X11_X11_INCLUDE_PATH
 X11_X11_INCLUDE_PATH-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: X11_X11_LIB
 X11_X11_LIB-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: X11_XRes_INCLUDE_PATH
+X11_XRes_INCLUDE_PATH-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: X11_XRes_LIB
+X11_XRes_LIB-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: X11_XShm_INCLUDE_PATH
 X11_XShm_INCLUDE_PATH-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: X11_XSync_INCLUDE_PATH
+X11_XSync_INCLUDE_PATH-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: X11_XTest_INCLUDE_PATH
 X11_XTest_INCLUDE_PATH-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: X11_XTest_LIB
@@ -936,6 +962,10 @@ X11_Xinput_INCLUDE_PATH-ADVANCED:INTERNAL=1
 X11_Xinput_LIB-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: X11_Xkb_INCLUDE_PATH
 X11_Xkb_INCLUDE_PATH-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: X11_Xkbfile_INCLUDE_PATH
+X11_Xkbfile_INCLUDE_PATH-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: X11_Xkbfile_LIB
+X11_Xkbfile_LIB-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: X11_Xkblib_INCLUDE_PATH
 X11_Xkblib_INCLUDE_PATH-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: X11_Xlib_INCLUDE_PATH

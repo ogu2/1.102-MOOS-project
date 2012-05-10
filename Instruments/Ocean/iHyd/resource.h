@@ -30,7 +30,7 @@
 //////////////////////////    END_GPL    //////////////////////////////////
 //{{NO_DEPENDENCIES}}
 // Microsoft Developer Studio generated include file.
-// Used by iCompass.rc
+// Used by iActuation.rc
 //
 #define IDI_ICON1                       101
 

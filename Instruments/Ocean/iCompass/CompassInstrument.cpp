@@ -1,36 +1,3 @@
-///////////////////////////////////////////////////////////////////////////
-//
-//   MOOS - Mission Oriented Operating Suite 
-//  
-//   A suit of Applications and Libraries for Mobile Robotics Research 
-//   Copyright (C) 2001-2005 Massachusetts Institute of Technology and 
-//   Oxford University. 
-//    
-//   This software was written by Paul Newman and others
-//   at MIT 2001-2002 and Oxford University 2003-2005.
-//   email: pnewman@robots.ox.ac.uk. 
-//      
-//   This file is part of a  MOOS Instrument. 
-//        
-//   This program is free software; you can redistribute it and/or 
-//   modify it under the terms of the GNU General Public License as 
-//   published by the Free Software Foundation; either version 2 of the 
-//   License, or (at your option) any later version. 
-//          
-//   This program is distributed in the hope that it will be useful, 
-//   but WITHOUT ANY WARRANTY; without even the implied warranty of 
-//   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU 
-//   General Public License for more details. 
-//            
-//   You should have received a copy of the GNU General Public License 
-//   along with this program; if not, write to the Free Software 
-//   Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 
-//   02111-1307, USA. 
-//
-//////////////////////////    END_GPL    //////////////////////////////////
-// CompassInstrument.cpp: implementation of the CCompassInstrument class.
-//
-//////////////////////////////////////////////////////////////////////
 #include <MOOSLIB/MOOSLib.h>
 
 
@@ -44,7 +11,6 @@ using namespace std;
 
 CCompassInstrument::CCompassInstrument()
 {
-    m_dfMagneticOffset = 0;
 }
 
 CCompassInstrument::~CCompassInstrument()
@@ -77,16 +43,25 @@ bool CCompassInstrument::PublishData()
 bool CCompassInstrument::OnStartUp()
 {
     CMOOSInstrument::OnStartUp();
-    
-    //here we make the variables that we are managing
-    double dfHeadingPeriod = 0.5;
 
-    //Compass update @ 2Hz
-    AddMOOSVariable("Heading",  "SIM_HEADING",  "COMPASS_HEADING",  dfHeadingPeriod);
-    AddMOOSVariable("Yaw",      "",             "COMPASS_YAW",      dfHeadingPeriod);
-    AddMOOSVariable("Raw",      "",             "COMPASS_RAW",      dfHeadingPeriod);
+    double dfmyPublisherTime=1.0;
+	AddMOOSVariable("pH","pH","pH",dfmyPublisherTime);
 
-    GetMagneticOffset();
+	string startpH="C\n";
+		bool pHresult=SendAndAck(startpH,startpH,300);
+		if(pHresult){
+			this->pHSensorOn=true;
+			return true;
+		}else{
+			//try again wait for longer period
+			pHresult=SendAndAck(startpH,startpH,600);
+			if(pHresult){
+				this->pHSensorOn=true;
+			}
+			//return whatever result
+			return pHresult;
+		}
+
 
     if(IsSimulateMode())
     {
@@ -102,7 +77,7 @@ bool CCompassInstrument::OnStartUp()
         }
             
         //try 10 times to initialise sensor
-        if(!InitialiseSensorN(10,"COMPASS"))
+        if(!InitialiseSensorN(10,"PH"))
         {
             return false;
         }          
@@ -116,8 +91,8 @@ bool CCompassInstrument::OnStartUp()
 
 bool CCompassInstrument::OnNewMail(MOOSMSG_LIST &NewMail)
 {
-
-    CMOOSMsg Msg;
+	//do nothing
+    /*CMOOSMsg Msg;
 
     if(m_Comms.PeekMail(NewMail,"SIM_HEADING",Msg,true))
     {
@@ -126,11 +101,62 @@ bool CCompassInstrument::OnNewMail(MOOSMSG_LIST &NewMail)
     else
     {
         return UpdateMOOSVariables(NewMail);
-    }
+    }*/
     return true;
 }
 
+bool SendAndAck(const string & sCmd,string &sReply,bool bWait)
+{
 
+
+    if(m_pPort==NULL)
+        return false;
+
+    if(m_bVerbose)
+    {
+        MOOSTrace("Send: %s\n",sCmd.c_str());
+    }
+
+    m_pPort->Write((char*)sCmd.c_str(),
+        sCmd.size());
+
+
+    //if we are required to read a reply
+    if(bWait)
+    {
+        if(!m_pPort->GetTelegram(sReply,TELEGRAM_PAUSE))
+        {
+            MOOSTrace("no terminated reply to \"%s\" from actuation hardware\n",sCmd.c_str());
+            return false;
+        }
+    }
+    else
+    {
+        //wait fort answer an ignore..
+
+        MOOSPause((int)(0.05*TELEGRAM_PAUSE*1000));
+
+        //Simply flush...
+        m_pPort->Flush();
+    }
+
+    if(m_bVerbose)
+    {
+        if(bWait)
+        {
+            MOOSTrace("Rx: %s\n",sReply.c_str());
+        }
+        else
+        {
+            MOOSTrace("Rx: No wait requested\n");
+        }
+    }
+
+
+
+    return true;
+
+}
 
 
 bool CCompassInstrument::OnConnectToServer()
@@ -152,7 +178,7 @@ bool CCompassInstrument::OnConnectToServer()
 // here we initialise the sensor, giving it start up values
 bool CCompassInstrument::InitialiseSensor()
 {    
-    
+
     return true;
 
 }
@@ -188,21 +214,29 @@ bool CCompassInstrument::GetData()
             SetMOOSVar("Raw",sWhat,MOOSTime());
         }
 
-        ParseCompassData(sWhat);
-        
+        if(sWhat.length()>0){
+                	SetMOOSVar("pH",sWhat,MOOSTime());
+		}else{
+			MOOSTrace("no pH reading from pH sensor");
+		}
+
+		//publish
+		PublishData();
+		PublishRaw();
+		return true;
         
         
     }
     else
     {
         //in simulated mode there is nothing to do..all data
-        //arrives via comms.
     }
     
     return true;
     
 }
 
+/*
 
 bool CCompassInstrument::ParseCompassData(string &sWhat)
 {
@@ -218,9 +252,10 @@ bool CCompassInstrument::ParseCompassData(string &sWhat)
 
     return true;
 }
+*/
 
 
-
+/*
 double CCompassInstrument::Magnetic2True(double dfMagnetic)
 {
     return dfMagnetic+m_dfMagneticOffset;
@@ -252,4 +287,4 @@ bool CCompassInstrument::UpdateWithMagneticDegrees(double dfMagDegrees)
     SetMOOSVar("Yaw",dfAngle,MOOSTime());
 
     return true;
-}
+}*/
