@@ -39,10 +39,10 @@ RM = /usr/bin/cmake -E remove -f
 CMAKE_EDIT_COMMAND = /usr/bin/ccmake
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ogutu/MOOS/Instruments/Ocean/iPH
+CMAKE_SOURCE_DIR = /home/ogutu/MOOS
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ogutu/MOOS/Instruments/Ocean/iPH
+CMAKE_BINARY_DIR = /home/ogutu/MOOS
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -57,6 +57,47 @@ edit_cache:
 edit_cache/fast: edit_cache
 .PHONY : edit_cache/fast
 
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
+
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: install/local
+.PHONY : install/local/fast
+
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: install/strip
+.PHONY : install/strip/fast
+
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+.PHONY : list_install_components/fast
+
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -69,14 +110,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ogutu/MOOS/Instruments/Ocean/iPH/CMakeFiles /home/ogutu/MOOS/Instruments/Ocean/iPH/CMakeFiles/progress.marks
-	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ogutu/MOOS/Instruments/Ocean/iPH/CMakeFiles 0
+	cd /home/ogutu/MOOS && $(CMAKE_COMMAND) -E cmake_progress_start /home/ogutu/MOOS/CMakeFiles /home/ogutu/MOOS/Instruments/Ocean/iPH/CMakeFiles/progress.marks
+	cd /home/ogutu/MOOS && $(MAKE) -f CMakeFiles/Makefile2 Instruments/Ocean/iPH/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ogutu/MOOS/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	$(MAKE) -f CMakeFiles/Makefile2 clean
+	cd /home/ogutu/MOOS && $(MAKE) -f CMakeFiles/Makefile2 Instruments/Ocean/iPH/clean
 .PHONY : clean
 
 # The main clean target
@@ -85,30 +126,31 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	$(MAKE) -f CMakeFiles/Makefile2 preinstall
+	cd /home/ogutu/MOOS && $(MAKE) -f CMakeFiles/Makefile2 Instruments/Ocean/iPH/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	$(MAKE) -f CMakeFiles/Makefile2 preinstall
+	cd /home/ogutu/MOOS && $(MAKE) -f CMakeFiles/Makefile2 Instruments/Ocean/iPH/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/ogutu/MOOS && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-#=============================================================================
-# Target rules for targets named ipH
+# Convenience name for target.
+Instruments/Ocean/iPH/CMakeFiles/ipH.dir/rule:
+	cd /home/ogutu/MOOS && $(MAKE) -f CMakeFiles/Makefile2 Instruments/Ocean/iPH/CMakeFiles/ipH.dir/rule
+.PHONY : Instruments/Ocean/iPH/CMakeFiles/ipH.dir/rule
 
-# Build rule for target.
-ipH: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 ipH
+# Convenience name for target.
+ipH: Instruments/Ocean/iPH/CMakeFiles/ipH.dir/rule
 .PHONY : ipH
 
 # fast build rule for target.
 ipH/fast:
-	$(MAKE) -f CMakeFiles/ipH.dir/build.make CMakeFiles/ipH.dir/build
+	cd /home/ogutu/MOOS && $(MAKE) -f Instruments/Ocean/iPH/CMakeFiles/ipH.dir/build.make Instruments/Ocean/iPH/CMakeFiles/ipH.dir/build
 .PHONY : ipH/fast
 
 ipHMain.o: ipHMain.cpp.o
@@ -116,7 +158,7 @@ ipHMain.o: ipHMain.cpp.o
 
 # target to build an object file
 ipHMain.cpp.o:
-	$(MAKE) -f CMakeFiles/ipH.dir/build.make CMakeFiles/ipH.dir/ipHMain.cpp.o
+	cd /home/ogutu/MOOS && $(MAKE) -f Instruments/Ocean/iPH/CMakeFiles/ipH.dir/build.make Instruments/Ocean/iPH/CMakeFiles/ipH.dir/ipHMain.cpp.o
 .PHONY : ipHMain.cpp.o
 
 ipHMain.i: ipHMain.cpp.i
@@ -124,7 +166,7 @@ ipHMain.i: ipHMain.cpp.i
 
 # target to preprocess a source file
 ipHMain.cpp.i:
-	$(MAKE) -f CMakeFiles/ipH.dir/build.make CMakeFiles/ipH.dir/ipHMain.cpp.i
+	cd /home/ogutu/MOOS && $(MAKE) -f Instruments/Ocean/iPH/CMakeFiles/ipH.dir/build.make Instruments/Ocean/iPH/CMakeFiles/ipH.dir/ipHMain.cpp.i
 .PHONY : ipHMain.cpp.i
 
 ipHMain.s: ipHMain.cpp.s
@@ -132,7 +174,7 @@ ipHMain.s: ipHMain.cpp.s
 
 # target to generate assembly for a file
 ipHMain.cpp.s:
-	$(MAKE) -f CMakeFiles/ipH.dir/build.make CMakeFiles/ipH.dir/ipHMain.cpp.s
+	cd /home/ogutu/MOOS && $(MAKE) -f Instruments/Ocean/iPH/CMakeFiles/ipH.dir/build.make Instruments/Ocean/iPH/CMakeFiles/ipH.dir/ipHMain.cpp.s
 .PHONY : ipHMain.cpp.s
 
 pHInstrument.o: pHInstrument.cpp.o
@@ -140,7 +182,7 @@ pHInstrument.o: pHInstrument.cpp.o
 
 # target to build an object file
 pHInstrument.cpp.o:
-	$(MAKE) -f CMakeFiles/ipH.dir/build.make CMakeFiles/ipH.dir/pHInstrument.cpp.o
+	cd /home/ogutu/MOOS && $(MAKE) -f Instruments/Ocean/iPH/CMakeFiles/ipH.dir/build.make Instruments/Ocean/iPH/CMakeFiles/ipH.dir/pHInstrument.cpp.o
 .PHONY : pHInstrument.cpp.o
 
 pHInstrument.i: pHInstrument.cpp.i
@@ -148,7 +190,7 @@ pHInstrument.i: pHInstrument.cpp.i
 
 # target to preprocess a source file
 pHInstrument.cpp.i:
-	$(MAKE) -f CMakeFiles/ipH.dir/build.make CMakeFiles/ipH.dir/pHInstrument.cpp.i
+	cd /home/ogutu/MOOS && $(MAKE) -f Instruments/Ocean/iPH/CMakeFiles/ipH.dir/build.make Instruments/Ocean/iPH/CMakeFiles/ipH.dir/pHInstrument.cpp.i
 .PHONY : pHInstrument.cpp.i
 
 pHInstrument.s: pHInstrument.cpp.s
@@ -156,7 +198,7 @@ pHInstrument.s: pHInstrument.cpp.s
 
 # target to generate assembly for a file
 pHInstrument.cpp.s:
-	$(MAKE) -f CMakeFiles/ipH.dir/build.make CMakeFiles/ipH.dir/pHInstrument.cpp.s
+	cd /home/ogutu/MOOS && $(MAKE) -f Instruments/Ocean/iPH/CMakeFiles/ipH.dir/build.make Instruments/Ocean/iPH/CMakeFiles/ipH.dir/pHInstrument.cpp.s
 .PHONY : pHInstrument.cpp.s
 
 # Help Target
@@ -166,7 +208,11 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
+	@echo "... install"
+	@echo "... install/local"
+	@echo "... install/strip"
 	@echo "... ipH"
+	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... ipHMain.o"
 	@echo "... ipHMain.i"
@@ -185,6 +231,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/ogutu/MOOS && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

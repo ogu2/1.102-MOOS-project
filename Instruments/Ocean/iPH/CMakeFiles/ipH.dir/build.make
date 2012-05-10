@@ -35,65 +35,65 @@ RM = /usr/bin/cmake -E remove -f
 CMAKE_EDIT_COMMAND = /usr/bin/ccmake
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ogutu/MOOS/Instruments/Ocean/iPH
+CMAKE_SOURCE_DIR = /home/ogutu/MOOS
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ogutu/MOOS/Instruments/Ocean/iPH
+CMAKE_BINARY_DIR = /home/ogutu/MOOS
 
 # Include any dependencies generated for this target.
-include CMakeFiles/ipH.dir/depend.make
+include Instruments/Ocean/iPH/CMakeFiles/ipH.dir/depend.make
 
 # Include the progress variables for this target.
-include CMakeFiles/ipH.dir/progress.make
+include Instruments/Ocean/iPH/CMakeFiles/ipH.dir/progress.make
 
 # Include the compile flags for this target's objects.
-include CMakeFiles/ipH.dir/flags.make
+include Instruments/Ocean/iPH/CMakeFiles/ipH.dir/flags.make
 
-CMakeFiles/ipH.dir/pHInstrument.cpp.o: CMakeFiles/ipH.dir/flags.make
-CMakeFiles/ipH.dir/pHInstrument.cpp.o: pHInstrument.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ogutu/MOOS/Instruments/Ocean/iPH/CMakeFiles $(CMAKE_PROGRESS_1)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/ipH.dir/pHInstrument.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/ipH.dir/pHInstrument.cpp.o -c /home/ogutu/MOOS/Instruments/Ocean/iPH/pHInstrument.cpp
+Instruments/Ocean/iPH/CMakeFiles/ipH.dir/pHInstrument.cpp.o: Instruments/Ocean/iPH/CMakeFiles/ipH.dir/flags.make
+Instruments/Ocean/iPH/CMakeFiles/ipH.dir/pHInstrument.cpp.o: Instruments/Ocean/iPH/pHInstrument.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ogutu/MOOS/CMakeFiles $(CMAKE_PROGRESS_1)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object Instruments/Ocean/iPH/CMakeFiles/ipH.dir/pHInstrument.cpp.o"
+	cd /home/ogutu/MOOS/Instruments/Ocean/iPH && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/ipH.dir/pHInstrument.cpp.o -c /home/ogutu/MOOS/Instruments/Ocean/iPH/pHInstrument.cpp
 
-CMakeFiles/ipH.dir/pHInstrument.cpp.i: cmake_force
+Instruments/Ocean/iPH/CMakeFiles/ipH.dir/pHInstrument.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ipH.dir/pHInstrument.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ogutu/MOOS/Instruments/Ocean/iPH/pHInstrument.cpp > CMakeFiles/ipH.dir/pHInstrument.cpp.i
+	cd /home/ogutu/MOOS/Instruments/Ocean/iPH && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ogutu/MOOS/Instruments/Ocean/iPH/pHInstrument.cpp > CMakeFiles/ipH.dir/pHInstrument.cpp.i
 
-CMakeFiles/ipH.dir/pHInstrument.cpp.s: cmake_force
+Instruments/Ocean/iPH/CMakeFiles/ipH.dir/pHInstrument.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ipH.dir/pHInstrument.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ogutu/MOOS/Instruments/Ocean/iPH/pHInstrument.cpp -o CMakeFiles/ipH.dir/pHInstrument.cpp.s
+	cd /home/ogutu/MOOS/Instruments/Ocean/iPH && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ogutu/MOOS/Instruments/Ocean/iPH/pHInstrument.cpp -o CMakeFiles/ipH.dir/pHInstrument.cpp.s
 
-CMakeFiles/ipH.dir/pHInstrument.cpp.o.requires:
-.PHONY : CMakeFiles/ipH.dir/pHInstrument.cpp.o.requires
+Instruments/Ocean/iPH/CMakeFiles/ipH.dir/pHInstrument.cpp.o.requires:
+.PHONY : Instruments/Ocean/iPH/CMakeFiles/ipH.dir/pHInstrument.cpp.o.requires
 
-CMakeFiles/ipH.dir/pHInstrument.cpp.o.provides: CMakeFiles/ipH.dir/pHInstrument.cpp.o.requires
-	$(MAKE) -f CMakeFiles/ipH.dir/build.make CMakeFiles/ipH.dir/pHInstrument.cpp.o.provides.build
-.PHONY : CMakeFiles/ipH.dir/pHInstrument.cpp.o.provides
+Instruments/Ocean/iPH/CMakeFiles/ipH.dir/pHInstrument.cpp.o.provides: Instruments/Ocean/iPH/CMakeFiles/ipH.dir/pHInstrument.cpp.o.requires
+	$(MAKE) -f Instruments/Ocean/iPH/CMakeFiles/ipH.dir/build.make Instruments/Ocean/iPH/CMakeFiles/ipH.dir/pHInstrument.cpp.o.provides.build
+.PHONY : Instruments/Ocean/iPH/CMakeFiles/ipH.dir/pHInstrument.cpp.o.provides
 
-CMakeFiles/ipH.dir/pHInstrument.cpp.o.provides.build: CMakeFiles/ipH.dir/pHInstrument.cpp.o
+Instruments/Ocean/iPH/CMakeFiles/ipH.dir/pHInstrument.cpp.o.provides.build: Instruments/Ocean/iPH/CMakeFiles/ipH.dir/pHInstrument.cpp.o
 
-CMakeFiles/ipH.dir/ipHMain.cpp.o: CMakeFiles/ipH.dir/flags.make
-CMakeFiles/ipH.dir/ipHMain.cpp.o: ipHMain.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ogutu/MOOS/Instruments/Ocean/iPH/CMakeFiles $(CMAKE_PROGRESS_2)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/ipH.dir/ipHMain.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/ipH.dir/ipHMain.cpp.o -c /home/ogutu/MOOS/Instruments/Ocean/iPH/ipHMain.cpp
+Instruments/Ocean/iPH/CMakeFiles/ipH.dir/ipHMain.cpp.o: Instruments/Ocean/iPH/CMakeFiles/ipH.dir/flags.make
+Instruments/Ocean/iPH/CMakeFiles/ipH.dir/ipHMain.cpp.o: Instruments/Ocean/iPH/ipHMain.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ogutu/MOOS/CMakeFiles $(CMAKE_PROGRESS_2)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object Instruments/Ocean/iPH/CMakeFiles/ipH.dir/ipHMain.cpp.o"
+	cd /home/ogutu/MOOS/Instruments/Ocean/iPH && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/ipH.dir/ipHMain.cpp.o -c /home/ogutu/MOOS/Instruments/Ocean/iPH/ipHMain.cpp
 
-CMakeFiles/ipH.dir/ipHMain.cpp.i: cmake_force
+Instruments/Ocean/iPH/CMakeFiles/ipH.dir/ipHMain.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ipH.dir/ipHMain.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ogutu/MOOS/Instruments/Ocean/iPH/ipHMain.cpp > CMakeFiles/ipH.dir/ipHMain.cpp.i
+	cd /home/ogutu/MOOS/Instruments/Ocean/iPH && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ogutu/MOOS/Instruments/Ocean/iPH/ipHMain.cpp > CMakeFiles/ipH.dir/ipHMain.cpp.i
 
-CMakeFiles/ipH.dir/ipHMain.cpp.s: cmake_force
+Instruments/Ocean/iPH/CMakeFiles/ipH.dir/ipHMain.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ipH.dir/ipHMain.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ogutu/MOOS/Instruments/Ocean/iPH/ipHMain.cpp -o CMakeFiles/ipH.dir/ipHMain.cpp.s
+	cd /home/ogutu/MOOS/Instruments/Ocean/iPH && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ogutu/MOOS/Instruments/Ocean/iPH/ipHMain.cpp -o CMakeFiles/ipH.dir/ipHMain.cpp.s
 
-CMakeFiles/ipH.dir/ipHMain.cpp.o.requires:
-.PHONY : CMakeFiles/ipH.dir/ipHMain.cpp.o.requires
+Instruments/Ocean/iPH/CMakeFiles/ipH.dir/ipHMain.cpp.o.requires:
+.PHONY : Instruments/Ocean/iPH/CMakeFiles/ipH.dir/ipHMain.cpp.o.requires
 
-CMakeFiles/ipH.dir/ipHMain.cpp.o.provides: CMakeFiles/ipH.dir/ipHMain.cpp.o.requires
-	$(MAKE) -f CMakeFiles/ipH.dir/build.make CMakeFiles/ipH.dir/ipHMain.cpp.o.provides.build
-.PHONY : CMakeFiles/ipH.dir/ipHMain.cpp.o.provides
+Instruments/Ocean/iPH/CMakeFiles/ipH.dir/ipHMain.cpp.o.provides: Instruments/Ocean/iPH/CMakeFiles/ipH.dir/ipHMain.cpp.o.requires
+	$(MAKE) -f Instruments/Ocean/iPH/CMakeFiles/ipH.dir/build.make Instruments/Ocean/iPH/CMakeFiles/ipH.dir/ipHMain.cpp.o.provides.build
+.PHONY : Instruments/Ocean/iPH/CMakeFiles/ipH.dir/ipHMain.cpp.o.provides
 
-CMakeFiles/ipH.dir/ipHMain.cpp.o.provides.build: CMakeFiles/ipH.dir/ipHMain.cpp.o
+Instruments/Ocean/iPH/CMakeFiles/ipH.dir/ipHMain.cpp.o.provides.build: Instruments/Ocean/iPH/CMakeFiles/ipH.dir/ipHMain.cpp.o
 
 # Object files for target ipH
 ipH_OBJECTS = \
@@ -103,26 +103,29 @@ ipH_OBJECTS = \
 # External object files for target ipH
 ipH_EXTERNAL_OBJECTS =
 
-ipH: CMakeFiles/ipH.dir/pHInstrument.cpp.o
-ipH: CMakeFiles/ipH.dir/ipHMain.cpp.o
-ipH: CMakeFiles/ipH.dir/build.make
-ipH: CMakeFiles/ipH.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX executable ipH"
-	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ipH.dir/link.txt --verbose=$(VERBOSE)
+MOOSBin/ipH: Instruments/Ocean/iPH/CMakeFiles/ipH.dir/pHInstrument.cpp.o
+MOOSBin/ipH: Instruments/Ocean/iPH/CMakeFiles/ipH.dir/ipHMain.cpp.o
+MOOSBin/ipH: MOOSBin/libMOOSUtility.a
+MOOSBin/ipH: MOOSBin/libMOOS.a
+MOOSBin/ipH: MOOSBin/libMOOSGen.a
+MOOSBin/ipH: Instruments/Ocean/iPH/CMakeFiles/ipH.dir/build.make
+MOOSBin/ipH: Instruments/Ocean/iPH/CMakeFiles/ipH.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX executable ../../../MOOSBin/ipH"
+	cd /home/ogutu/MOOS/Instruments/Ocean/iPH && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ipH.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-CMakeFiles/ipH.dir/build: ipH
-.PHONY : CMakeFiles/ipH.dir/build
+Instruments/Ocean/iPH/CMakeFiles/ipH.dir/build: MOOSBin/ipH
+.PHONY : Instruments/Ocean/iPH/CMakeFiles/ipH.dir/build
 
-CMakeFiles/ipH.dir/requires: CMakeFiles/ipH.dir/pHInstrument.cpp.o.requires
-CMakeFiles/ipH.dir/requires: CMakeFiles/ipH.dir/ipHMain.cpp.o.requires
-.PHONY : CMakeFiles/ipH.dir/requires
+Instruments/Ocean/iPH/CMakeFiles/ipH.dir/requires: Instruments/Ocean/iPH/CMakeFiles/ipH.dir/pHInstrument.cpp.o.requires
+Instruments/Ocean/iPH/CMakeFiles/ipH.dir/requires: Instruments/Ocean/iPH/CMakeFiles/ipH.dir/ipHMain.cpp.o.requires
+.PHONY : Instruments/Ocean/iPH/CMakeFiles/ipH.dir/requires
 
-CMakeFiles/ipH.dir/clean:
-	$(CMAKE_COMMAND) -P CMakeFiles/ipH.dir/cmake_clean.cmake
-.PHONY : CMakeFiles/ipH.dir/clean
+Instruments/Ocean/iPH/CMakeFiles/ipH.dir/clean:
+	cd /home/ogutu/MOOS/Instruments/Ocean/iPH && $(CMAKE_COMMAND) -P CMakeFiles/ipH.dir/cmake_clean.cmake
+.PHONY : Instruments/Ocean/iPH/CMakeFiles/ipH.dir/clean
 
-CMakeFiles/ipH.dir/depend:
-	cd /home/ogutu/MOOS/Instruments/Ocean/iPH && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ogutu/MOOS/Instruments/Ocean/iPH /home/ogutu/MOOS/Instruments/Ocean/iPH /home/ogutu/MOOS/Instruments/Ocean/iPH /home/ogutu/MOOS/Instruments/Ocean/iPH /home/ogutu/MOOS/Instruments/Ocean/iPH/CMakeFiles/ipH.dir/DependInfo.cmake --color=$(COLOR)
-.PHONY : CMakeFiles/ipH.dir/depend
+Instruments/Ocean/iPH/CMakeFiles/ipH.dir/depend:
+	cd /home/ogutu/MOOS && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ogutu/MOOS /home/ogutu/MOOS/Instruments/Ocean/iPH /home/ogutu/MOOS /home/ogutu/MOOS/Instruments/Ocean/iPH /home/ogutu/MOOS/Instruments/Ocean/iPH/CMakeFiles/ipH.dir/DependInfo.cmake --color=$(COLOR)
+.PHONY : Instruments/Ocean/iPH/CMakeFiles/ipH.dir/depend
 

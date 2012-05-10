@@ -19,7 +19,7 @@ ALLOW_RELEASE_ASSERTS:BOOL=FALSE
 
 //Specify other directories you want to include in the build (semicolon
 // separated list)
-ALSO_BUILD:STRING=
+ALSO_BUILD:STRING=Instruments/Ocean/iPH
 
 //Value Computed by CMake
 AntlerTestApps_BINARY_DIR:STATIC=/home/ogutu/MOOS/Docs/Essentials/Antler/code
@@ -91,7 +91,7 @@ BUILD_UMS:BOOL=ON
 BUILD_UMVS:BOOL=ON
 
 //Build Playback Tool?
-BUILD_UPB:BOOL=OFF
+BUILD_UPB:BOOL=ON
 
 //Build Indexed Playback Tool?
 BUILD_UPBINDEXED:BOOL=OFF
@@ -642,6 +642,12 @@ iRemote_BINARY_DIR:STATIC=/home/ogutu/MOOS/NavigationAndControl/iRemote
 iRemote_SOURCE_DIR:STATIC=/home/ogutu/MOOS/NavigationAndControl/iRemote
 
 //Value Computed by CMake
+ipH_BINARY_DIR:STATIC=/home/ogutu/MOOS/Instruments/Ocean/iPH
+
+//Value Computed by CMake
+ipH_SOURCE_DIR:STATIC=/home/ogutu/MOOS/Instruments/Ocean/iPH
+
+//Value Computed by CMake
 newmat_BINARY_DIR:STATIC=/home/ogutu/MOOS/Thirdparty/newmat
 
 //Dependencies for target
@@ -699,6 +705,12 @@ uMVS_BINARY_DIR:STATIC=/home/ogutu/MOOS/Tools/Simulation/Ocean/uMVS
 uMVS_SOURCE_DIR:STATIC=/home/ogutu/MOOS/Tools/Simulation/Ocean/uMVS
 
 //Value Computed by CMake
+uPlayBack_BINARY_DIR:STATIC=/home/ogutu/MOOS/Tools/Graphical/uPlayBack
+
+//Value Computed by CMake
+uPlayBack_SOURCE_DIR:STATIC=/home/ogutu/MOOS/Tools/Graphical/uPlayBack
+
+//Value Computed by CMake
 uPoke_BINARY_DIR:STATIC=/home/ogutu/MOOS/Tools/Console/uPoke
 
 //Value Computed by CMake
@@ -709,6 +721,8 @@ uPoke_SOURCE_DIR:STATIC=/home/ogutu/MOOS/Tools/Console/uPoke
 # INTERNAL cache entries
 ########################
 
+//MODIFIED property for variable: ALSO_BUILD
+ALSO_BUILD-MODIFIED:INTERNAL=ON
 //MODIFIED property for variable: BUILD_CONSOLE_TOOLS
 BUILD_CONSOLE_TOOLS-MODIFIED:INTERNAL=ON
 //MODIFIED property for variable: BUILD_CONTROL_AND_NAV
@@ -729,6 +743,8 @@ BUILD_SIM_TOOLS-MODIFIED:INTERNAL=ON
 BUILD_TOOLS-MODIFIED:INTERNAL=ON
 //MODIFIED property for variable: BUILD_UMVS
 BUILD_UMVS-MODIFIED:INTERNAL=ON
+//MODIFIED property for variable: BUILD_UPB
+BUILD_UPB-MODIFIED:INTERNAL=ON
 //ADVANCED property for variable: CMAKE_AR
 CMAKE_AR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_BUILD_TOOL
@@ -831,7 +847,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_LOCAL_GENERATORS:INTERNAL=49
+CMAKE_NUMBER_OF_LOCAL_GENERATORS:INTERNAL=51
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

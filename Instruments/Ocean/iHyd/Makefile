@@ -39,10 +39,10 @@ RM = /usr/bin/cmake -E remove -f
 CMAKE_EDIT_COMMAND = /usr/bin/ccmake
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ogutu/MOOS
+CMAKE_SOURCE_DIR = /home/ogutu/MOOS/Instruments/Ocean/iHyd
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ogutu/MOOS
+CMAKE_BINARY_DIR = /home/ogutu/MOOS/Instruments/Ocean/iHyd
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -57,47 +57,6 @@ edit_cache:
 edit_cache/fast: edit_cache
 .PHONY : edit_cache/fast
 
-# Special rule for the target install
-install: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install
-
-# Special rule for the target install
-install/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install/fast
-
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
-
-# Special rule for the target install/local
-install/local/fast: install/local
-.PHONY : install/local/fast
-
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: install/strip
-.PHONY : install/strip/fast
-
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
-.PHONY : list_install_components
-
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
-.PHONY : list_install_components/fast
-
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -110,14 +69,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/ogutu/MOOS && $(CMAKE_COMMAND) -E cmake_progress_start /home/ogutu/MOOS/CMakeFiles /home/ogutu/MOOS/Instruments/Ocean/iActuation/CMakeFiles/progress.marks
-	cd /home/ogutu/MOOS && $(MAKE) -f CMakeFiles/Makefile2 Instruments/Ocean/iActuation/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ogutu/MOOS/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ogutu/MOOS/Instruments/Ocean/iHyd/CMakeFiles /home/ogutu/MOOS/Instruments/Ocean/iHyd/CMakeFiles/progress.marks
+	$(MAKE) -f CMakeFiles/Makefile2 all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ogutu/MOOS/Instruments/Ocean/iHyd/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/ogutu/MOOS && $(MAKE) -f CMakeFiles/Makefile2 Instruments/Ocean/iActuation/clean
+	$(MAKE) -f CMakeFiles/Makefile2 clean
 .PHONY : clean
 
 # The main clean target
@@ -126,39 +85,38 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/ogutu/MOOS && $(MAKE) -f CMakeFiles/Makefile2 Instruments/Ocean/iActuation/preinstall
+	$(MAKE) -f CMakeFiles/Makefile2 preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/ogutu/MOOS && $(MAKE) -f CMakeFiles/Makefile2 Instruments/Ocean/iActuation/preinstall
+	$(MAKE) -f CMakeFiles/Makefile2 preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/ogutu/MOOS && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	$(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-# Convenience name for target.
-Instruments/Ocean/iActuation/CMakeFiles/iActuation.dir/rule:
-	cd /home/ogutu/MOOS && $(MAKE) -f CMakeFiles/Makefile2 Instruments/Ocean/iActuation/CMakeFiles/iActuation.dir/rule
-.PHONY : Instruments/Ocean/iActuation/CMakeFiles/iActuation.dir/rule
+#=============================================================================
+# Target rules for targets named iHyd
 
-# Convenience name for target.
-iActuation: Instruments/Ocean/iActuation/CMakeFiles/iActuation.dir/rule
-.PHONY : iActuation
+# Build rule for target.
+iHyd: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 iHyd
+.PHONY : iHyd
 
 # fast build rule for target.
-iActuation/fast:
-	cd /home/ogutu/MOOS && $(MAKE) -f Instruments/Ocean/iActuation/CMakeFiles/iActuation.dir/build.make Instruments/Ocean/iActuation/CMakeFiles/iActuation.dir/build
-.PHONY : iActuation/fast
+iHyd/fast:
+	$(MAKE) -f CMakeFiles/iHyd.dir/build.make CMakeFiles/iHyd.dir/build
+.PHONY : iHyd/fast
 
 MOOSASCDriver.o: MOOSASCDriver.cpp.o
 .PHONY : MOOSASCDriver.o
 
 # target to build an object file
 MOOSASCDriver.cpp.o:
-	cd /home/ogutu/MOOS && $(MAKE) -f Instruments/Ocean/iActuation/CMakeFiles/iActuation.dir/build.make Instruments/Ocean/iActuation/CMakeFiles/iActuation.dir/MOOSASCDriver.cpp.o
+	$(MAKE) -f CMakeFiles/iHyd.dir/build.make CMakeFiles/iHyd.dir/MOOSASCDriver.cpp.o
 .PHONY : MOOSASCDriver.cpp.o
 
 MOOSASCDriver.i: MOOSASCDriver.cpp.i
@@ -166,7 +124,7 @@ MOOSASCDriver.i: MOOSASCDriver.cpp.i
 
 # target to preprocess a source file
 MOOSASCDriver.cpp.i:
-	cd /home/ogutu/MOOS && $(MAKE) -f Instruments/Ocean/iActuation/CMakeFiles/iActuation.dir/build.make Instruments/Ocean/iActuation/CMakeFiles/iActuation.dir/MOOSASCDriver.cpp.i
+	$(MAKE) -f CMakeFiles/iHyd.dir/build.make CMakeFiles/iHyd.dir/MOOSASCDriver.cpp.i
 .PHONY : MOOSASCDriver.cpp.i
 
 MOOSASCDriver.s: MOOSASCDriver.cpp.s
@@ -174,7 +132,7 @@ MOOSASCDriver.s: MOOSASCDriver.cpp.s
 
 # target to generate assembly for a file
 MOOSASCDriver.cpp.s:
-	cd /home/ogutu/MOOS && $(MAKE) -f Instruments/Ocean/iActuation/CMakeFiles/iActuation.dir/build.make Instruments/Ocean/iActuation/CMakeFiles/iActuation.dir/MOOSASCDriver.cpp.s
+	$(MAKE) -f CMakeFiles/iHyd.dir/build.make CMakeFiles/iHyd.dir/MOOSASCDriver.cpp.s
 .PHONY : MOOSASCDriver.cpp.s
 
 MOOSActuation.o: MOOSActuation.cpp.o
@@ -182,7 +140,7 @@ MOOSActuation.o: MOOSActuation.cpp.o
 
 # target to build an object file
 MOOSActuation.cpp.o:
-	cd /home/ogutu/MOOS && $(MAKE) -f Instruments/Ocean/iActuation/CMakeFiles/iActuation.dir/build.make Instruments/Ocean/iActuation/CMakeFiles/iActuation.dir/MOOSActuation.cpp.o
+	$(MAKE) -f CMakeFiles/iHyd.dir/build.make CMakeFiles/iHyd.dir/MOOSActuation.cpp.o
 .PHONY : MOOSActuation.cpp.o
 
 MOOSActuation.i: MOOSActuation.cpp.i
@@ -190,7 +148,7 @@ MOOSActuation.i: MOOSActuation.cpp.i
 
 # target to preprocess a source file
 MOOSActuation.cpp.i:
-	cd /home/ogutu/MOOS && $(MAKE) -f Instruments/Ocean/iActuation/CMakeFiles/iActuation.dir/build.make Instruments/Ocean/iActuation/CMakeFiles/iActuation.dir/MOOSActuation.cpp.i
+	$(MAKE) -f CMakeFiles/iHyd.dir/build.make CMakeFiles/iHyd.dir/MOOSActuation.cpp.i
 .PHONY : MOOSActuation.cpp.i
 
 MOOSActuation.s: MOOSActuation.cpp.s
@@ -198,7 +156,7 @@ MOOSActuation.s: MOOSActuation.cpp.s
 
 # target to generate assembly for a file
 MOOSActuation.cpp.s:
-	cd /home/ogutu/MOOS && $(MAKE) -f Instruments/Ocean/iActuation/CMakeFiles/iActuation.dir/build.make Instruments/Ocean/iActuation/CMakeFiles/iActuation.dir/MOOSActuation.cpp.s
+	$(MAKE) -f CMakeFiles/iHyd.dir/build.make CMakeFiles/iHyd.dir/MOOSActuation.cpp.s
 .PHONY : MOOSActuation.cpp.s
 
 MOOSActuationDriver.o: MOOSActuationDriver.cpp.o
@@ -206,7 +164,7 @@ MOOSActuationDriver.o: MOOSActuationDriver.cpp.o
 
 # target to build an object file
 MOOSActuationDriver.cpp.o:
-	cd /home/ogutu/MOOS && $(MAKE) -f Instruments/Ocean/iActuation/CMakeFiles/iActuation.dir/build.make Instruments/Ocean/iActuation/CMakeFiles/iActuation.dir/MOOSActuationDriver.cpp.o
+	$(MAKE) -f CMakeFiles/iHyd.dir/build.make CMakeFiles/iHyd.dir/MOOSActuationDriver.cpp.o
 .PHONY : MOOSActuationDriver.cpp.o
 
 MOOSActuationDriver.i: MOOSActuationDriver.cpp.i
@@ -214,7 +172,7 @@ MOOSActuationDriver.i: MOOSActuationDriver.cpp.i
 
 # target to preprocess a source file
 MOOSActuationDriver.cpp.i:
-	cd /home/ogutu/MOOS && $(MAKE) -f Instruments/Ocean/iActuation/CMakeFiles/iActuation.dir/build.make Instruments/Ocean/iActuation/CMakeFiles/iActuation.dir/MOOSActuationDriver.cpp.i
+	$(MAKE) -f CMakeFiles/iHyd.dir/build.make CMakeFiles/iHyd.dir/MOOSActuationDriver.cpp.i
 .PHONY : MOOSActuationDriver.cpp.i
 
 MOOSActuationDriver.s: MOOSActuationDriver.cpp.s
@@ -222,7 +180,7 @@ MOOSActuationDriver.s: MOOSActuationDriver.cpp.s
 
 # target to generate assembly for a file
 MOOSActuationDriver.cpp.s:
-	cd /home/ogutu/MOOS && $(MAKE) -f Instruments/Ocean/iActuation/CMakeFiles/iActuation.dir/build.make Instruments/Ocean/iActuation/CMakeFiles/iActuation.dir/MOOSActuationDriver.cpp.s
+	$(MAKE) -f CMakeFiles/iHyd.dir/build.make CMakeFiles/iHyd.dir/MOOSActuationDriver.cpp.s
 .PHONY : MOOSActuationDriver.cpp.s
 
 MOOSBluefinDriver.o: MOOSBluefinDriver.cpp.o
@@ -230,7 +188,7 @@ MOOSBluefinDriver.o: MOOSBluefinDriver.cpp.o
 
 # target to build an object file
 MOOSBluefinDriver.cpp.o:
-	cd /home/ogutu/MOOS && $(MAKE) -f Instruments/Ocean/iActuation/CMakeFiles/iActuation.dir/build.make Instruments/Ocean/iActuation/CMakeFiles/iActuation.dir/MOOSBluefinDriver.cpp.o
+	$(MAKE) -f CMakeFiles/iHyd.dir/build.make CMakeFiles/iHyd.dir/MOOSBluefinDriver.cpp.o
 .PHONY : MOOSBluefinDriver.cpp.o
 
 MOOSBluefinDriver.i: MOOSBluefinDriver.cpp.i
@@ -238,7 +196,7 @@ MOOSBluefinDriver.i: MOOSBluefinDriver.cpp.i
 
 # target to preprocess a source file
 MOOSBluefinDriver.cpp.i:
-	cd /home/ogutu/MOOS && $(MAKE) -f Instruments/Ocean/iActuation/CMakeFiles/iActuation.dir/build.make Instruments/Ocean/iActuation/CMakeFiles/iActuation.dir/MOOSBluefinDriver.cpp.i
+	$(MAKE) -f CMakeFiles/iHyd.dir/build.make CMakeFiles/iHyd.dir/MOOSBluefinDriver.cpp.i
 .PHONY : MOOSBluefinDriver.cpp.i
 
 MOOSBluefinDriver.s: MOOSBluefinDriver.cpp.s
@@ -246,7 +204,7 @@ MOOSBluefinDriver.s: MOOSBluefinDriver.cpp.s
 
 # target to generate assembly for a file
 MOOSBluefinDriver.cpp.s:
-	cd /home/ogutu/MOOS && $(MAKE) -f Instruments/Ocean/iActuation/CMakeFiles/iActuation.dir/build.make Instruments/Ocean/iActuation/CMakeFiles/iActuation.dir/MOOSBluefinDriver.cpp.s
+	$(MAKE) -f CMakeFiles/iHyd.dir/build.make CMakeFiles/iHyd.dir/MOOSBluefinDriver.cpp.s
 .PHONY : MOOSBluefinDriver.cpp.s
 
 MOOSJRKerrDriver.o: MOOSJRKerrDriver.cpp.o
@@ -254,7 +212,7 @@ MOOSJRKerrDriver.o: MOOSJRKerrDriver.cpp.o
 
 # target to build an object file
 MOOSJRKerrDriver.cpp.o:
-	cd /home/ogutu/MOOS && $(MAKE) -f Instruments/Ocean/iActuation/CMakeFiles/iActuation.dir/build.make Instruments/Ocean/iActuation/CMakeFiles/iActuation.dir/MOOSJRKerrDriver.cpp.o
+	$(MAKE) -f CMakeFiles/iHyd.dir/build.make CMakeFiles/iHyd.dir/MOOSJRKerrDriver.cpp.o
 .PHONY : MOOSJRKerrDriver.cpp.o
 
 MOOSJRKerrDriver.i: MOOSJRKerrDriver.cpp.i
@@ -262,7 +220,7 @@ MOOSJRKerrDriver.i: MOOSJRKerrDriver.cpp.i
 
 # target to preprocess a source file
 MOOSJRKerrDriver.cpp.i:
-	cd /home/ogutu/MOOS && $(MAKE) -f Instruments/Ocean/iActuation/CMakeFiles/iActuation.dir/build.make Instruments/Ocean/iActuation/CMakeFiles/iActuation.dir/MOOSJRKerrDriver.cpp.i
+	$(MAKE) -f CMakeFiles/iHyd.dir/build.make CMakeFiles/iHyd.dir/MOOSJRKerrDriver.cpp.i
 .PHONY : MOOSJRKerrDriver.cpp.i
 
 MOOSJRKerrDriver.s: MOOSJRKerrDriver.cpp.s
@@ -270,7 +228,7 @@ MOOSJRKerrDriver.s: MOOSJRKerrDriver.cpp.s
 
 # target to generate assembly for a file
 MOOSJRKerrDriver.cpp.s:
-	cd /home/ogutu/MOOS && $(MAKE) -f Instruments/Ocean/iActuation/CMakeFiles/iActuation.dir/build.make Instruments/Ocean/iActuation/CMakeFiles/iActuation.dir/MOOSJRKerrDriver.cpp.s
+	$(MAKE) -f CMakeFiles/iHyd.dir/build.make CMakeFiles/iHyd.dir/MOOSJRKerrDriver.cpp.s
 .PHONY : MOOSJRKerrDriver.cpp.s
 
 MOOSSAILDriver.o: MOOSSAILDriver.cpp.o
@@ -278,7 +236,7 @@ MOOSSAILDriver.o: MOOSSAILDriver.cpp.o
 
 # target to build an object file
 MOOSSAILDriver.cpp.o:
-	cd /home/ogutu/MOOS && $(MAKE) -f Instruments/Ocean/iActuation/CMakeFiles/iActuation.dir/build.make Instruments/Ocean/iActuation/CMakeFiles/iActuation.dir/MOOSSAILDriver.cpp.o
+	$(MAKE) -f CMakeFiles/iHyd.dir/build.make CMakeFiles/iHyd.dir/MOOSSAILDriver.cpp.o
 .PHONY : MOOSSAILDriver.cpp.o
 
 MOOSSAILDriver.i: MOOSSAILDriver.cpp.i
@@ -286,7 +244,7 @@ MOOSSAILDriver.i: MOOSSAILDriver.cpp.i
 
 # target to preprocess a source file
 MOOSSAILDriver.cpp.i:
-	cd /home/ogutu/MOOS && $(MAKE) -f Instruments/Ocean/iActuation/CMakeFiles/iActuation.dir/build.make Instruments/Ocean/iActuation/CMakeFiles/iActuation.dir/MOOSSAILDriver.cpp.i
+	$(MAKE) -f CMakeFiles/iHyd.dir/build.make CMakeFiles/iHyd.dir/MOOSSAILDriver.cpp.i
 .PHONY : MOOSSAILDriver.cpp.i
 
 MOOSSAILDriver.s: MOOSSAILDriver.cpp.s
@@ -294,7 +252,7 @@ MOOSSAILDriver.s: MOOSSAILDriver.cpp.s
 
 # target to generate assembly for a file
 MOOSSAILDriver.cpp.s:
-	cd /home/ogutu/MOOS && $(MAKE) -f Instruments/Ocean/iActuation/CMakeFiles/iActuation.dir/build.make Instruments/Ocean/iActuation/CMakeFiles/iActuation.dir/MOOSSAILDriver.cpp.s
+	$(MAKE) -f CMakeFiles/iHyd.dir/build.make CMakeFiles/iHyd.dir/MOOSSAILDriver.cpp.s
 .PHONY : MOOSSAILDriver.cpp.s
 
 iActuationMain.o: iActuationMain.cpp.o
@@ -302,7 +260,7 @@ iActuationMain.o: iActuationMain.cpp.o
 
 # target to build an object file
 iActuationMain.cpp.o:
-	cd /home/ogutu/MOOS && $(MAKE) -f Instruments/Ocean/iActuation/CMakeFiles/iActuation.dir/build.make Instruments/Ocean/iActuation/CMakeFiles/iActuation.dir/iActuationMain.cpp.o
+	$(MAKE) -f CMakeFiles/iHyd.dir/build.make CMakeFiles/iHyd.dir/iActuationMain.cpp.o
 .PHONY : iActuationMain.cpp.o
 
 iActuationMain.i: iActuationMain.cpp.i
@@ -310,7 +268,7 @@ iActuationMain.i: iActuationMain.cpp.i
 
 # target to preprocess a source file
 iActuationMain.cpp.i:
-	cd /home/ogutu/MOOS && $(MAKE) -f Instruments/Ocean/iActuation/CMakeFiles/iActuation.dir/build.make Instruments/Ocean/iActuation/CMakeFiles/iActuation.dir/iActuationMain.cpp.i
+	$(MAKE) -f CMakeFiles/iHyd.dir/build.make CMakeFiles/iHyd.dir/iActuationMain.cpp.i
 .PHONY : iActuationMain.cpp.i
 
 iActuationMain.s: iActuationMain.cpp.s
@@ -318,7 +276,7 @@ iActuationMain.s: iActuationMain.cpp.s
 
 # target to generate assembly for a file
 iActuationMain.cpp.s:
-	cd /home/ogutu/MOOS && $(MAKE) -f Instruments/Ocean/iActuation/CMakeFiles/iActuation.dir/build.make Instruments/Ocean/iActuation/CMakeFiles/iActuation.dir/iActuationMain.cpp.s
+	$(MAKE) -f CMakeFiles/iHyd.dir/build.make CMakeFiles/iHyd.dir/iActuationMain.cpp.s
 .PHONY : iActuationMain.cpp.s
 
 # Help Target
@@ -328,11 +286,7 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
-	@echo "... iActuation"
-	@echo "... install"
-	@echo "... install/local"
-	@echo "... install/strip"
-	@echo "... list_install_components"
+	@echo "... iHyd"
 	@echo "... rebuild_cache"
 	@echo "... MOOSASCDriver.o"
 	@echo "... MOOSASCDriver.i"
@@ -366,6 +320,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/ogutu/MOOS && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	$(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

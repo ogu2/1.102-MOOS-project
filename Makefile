@@ -192,6 +192,19 @@ MOOSUtility/fast:
 .PHONY : MOOSUtility/fast
 
 #=============================================================================
+# Target rules for targets named ipH
+
+# Build rule for target.
+ipH: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ipH
+.PHONY : ipH
+
+# fast build rule for target.
+ipH/fast:
+	$(MAKE) -f Instruments/Ocean/iPH/CMakeFiles/ipH.dir/build.make Instruments/Ocean/iPH/CMakeFiles/ipH.dir/build
+.PHONY : ipH/fast
+
+#=============================================================================
 # Target rules for targets named MOOSGen
 
 # Build rule for target.
@@ -359,6 +372,19 @@ uMS: cmake_check_build_system
 uMS/fast:
 	$(MAKE) -f Tools/Graphical/uMS/CMakeFiles/uMS.dir/build.make Tools/Graphical/uMS/CMakeFiles/uMS.dir/build
 .PHONY : uMS/fast
+
+#=============================================================================
+# Target rules for targets named uPlayBack
+
+# Build rule for target.
+uPlayBack: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 uPlayBack
+.PHONY : uPlayBack
+
+# fast build rule for target.
+uPlayBack/fast:
+	$(MAKE) -f Tools/Graphical/uPlayBack/CMakeFiles/uPlayBack.dir/build.make Tools/Graphical/uPlayBack/CMakeFiles/uPlayBack.dir/build
+.PHONY : uPlayBack/fast
 
 #=============================================================================
 # Target rules for targets named uMVS
@@ -610,6 +636,7 @@ help:
 	@echo "... pAntlerTestAppB"
 	@echo "... pAntlerTestAppC"
 	@echo "... MOOSUtility"
+	@echo "... ipH"
 	@echo "... MOOSGen"
 	@echo "... MOOS"
 	@echo "... MOOSDB"
@@ -623,6 +650,7 @@ help:
 	@echo "... pHelm"
 	@echo "... iRemote"
 	@echo "... uMS"
+	@echo "... uPlayBack"
 	@echo "... uMVS"
 	@echo "... uPoke"
 	@echo "... iGPS"

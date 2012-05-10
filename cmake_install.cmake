@@ -43,6 +43,7 @@ IF(NOT CMAKE_INSTALL_LOCAL_ONLY)
   INCLUDE("/home/ogutu/MOOS/Docs/Essentials/Antler/code/cmake_install.cmake")
   INCLUDE("/home/ogutu/MOOS/Thirdparty/cmake_install.cmake")
   INCLUDE("/home/ogutu/MOOS/Essentials/MOOSUtilityLib/cmake_install.cmake")
+  INCLUDE("/home/ogutu/MOOS/Instruments/Ocean/iPH/cmake_install.cmake")
 
 ENDIF(NOT CMAKE_INSTALL_LOCAL_ONLY)
 

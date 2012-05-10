@@ -1,8 +1,8 @@
 FILE(REMOVE_RECURSE
   "CMakeFiles/ipH.dir/pHInstrument.cpp.o"
   "CMakeFiles/ipH.dir/ipHMain.cpp.o"
-  "ipH.pdb"
-  "ipH"
+  "../../../MOOSBin/ipH.pdb"
+  "../../../MOOSBin/ipH"
 )
 
 # Per-language clean rules from dependency scanning.
