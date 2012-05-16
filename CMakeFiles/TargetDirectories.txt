@@ -20,7 +20,7 @@
 /home/ogutu/MOOS/Instruments/Ocean/iLBL/CMakeFiles/iLBL.dir
 /home/ogutu/MOOS/Instruments/Ocean/iRelay/CMakeFiles/iRelay.dir
 /home/ogutu/MOOS/NavigationAndControl/iRemote/CMakeFiles/iRemote.dir
-/home/ogutu/MOOS/Instruments/Ocean/iPH/CMakeFiles/ipH.dir
+/home/ogutu/MOOS/ipH/CMakeFiles/ipH.dir
 /home/ogutu/MOOS/Thirdparty/newmat/CMakeFiles/newmat.dir
 /home/ogutu/MOOS/Essentials/pAntler/CMakeFiles/pAntler.dir
 /home/ogutu/MOOS/Docs/Essentials/Antler/code/CMakeFiles/pAntlerTestAppA.dir

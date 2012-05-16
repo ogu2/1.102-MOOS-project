@@ -201,7 +201,7 @@ ipH: cmake_check_build_system
 
 # fast build rule for target.
 ipH/fast:
-	$(MAKE) -f Instruments/Ocean/iPH/CMakeFiles/ipH.dir/build.make Instruments/Ocean/iPH/CMakeFiles/ipH.dir/build
+	$(MAKE) -f ipH/CMakeFiles/ipH.dir/build.make ipH/CMakeFiles/ipH.dir/build
 .PHONY : ipH/fast
 
 #=============================================================================

@@ -216,8 +216,8 @@ Docs/Essentials/Antler/code/preinstall:
 # Target rules for target Docs/Essentials/Antler/code/CMakeFiles/pAntlerTestAppA.dir
 
 # All Build rule for target.
-Docs/Essentials/Antler/code/CMakeFiles/pAntlerTestAppA.dir/all: Core/MOOSLIB/CMakeFiles/MOOS.dir/all
 Docs/Essentials/Antler/code/CMakeFiles/pAntlerTestAppA.dir/all: Core/MOOSGenLib/CMakeFiles/MOOSGen.dir/all
+Docs/Essentials/Antler/code/CMakeFiles/pAntlerTestAppA.dir/all: Core/MOOSLIB/CMakeFiles/MOOS.dir/all
 Docs/Essentials/Antler/code/CMakeFiles/pAntlerTestAppA.dir/all: Essentials/MOOSUtilityLib/CMakeFiles/MOOSUtility.dir/all
 	$(MAKE) -f Docs/Essentials/Antler/code/CMakeFiles/pAntlerTestAppA.dir/build.make Docs/Essentials/Antler/code/CMakeFiles/pAntlerTestAppA.dir/depend
 	$(MAKE) -f Docs/Essentials/Antler/code/CMakeFiles/pAntlerTestAppA.dir/build.make Docs/Essentials/Antler/code/CMakeFiles/pAntlerTestAppA.dir/build
@@ -253,8 +253,8 @@ clean: Docs/Essentials/Antler/code/CMakeFiles/pAntlerTestAppA.dir/clean
 # Target rules for target Docs/Essentials/Antler/code/CMakeFiles/pAntlerTestAppB.dir
 
 # All Build rule for target.
-Docs/Essentials/Antler/code/CMakeFiles/pAntlerTestAppB.dir/all: Core/MOOSLIB/CMakeFiles/MOOS.dir/all
 Docs/Essentials/Antler/code/CMakeFiles/pAntlerTestAppB.dir/all: Core/MOOSGenLib/CMakeFiles/MOOSGen.dir/all
+Docs/Essentials/Antler/code/CMakeFiles/pAntlerTestAppB.dir/all: Core/MOOSLIB/CMakeFiles/MOOS.dir/all
 Docs/Essentials/Antler/code/CMakeFiles/pAntlerTestAppB.dir/all: Essentials/MOOSUtilityLib/CMakeFiles/MOOSUtility.dir/all
 	$(MAKE) -f Docs/Essentials/Antler/code/CMakeFiles/pAntlerTestAppB.dir/build.make Docs/Essentials/Antler/code/CMakeFiles/pAntlerTestAppB.dir/depend
 	$(MAKE) -f Docs/Essentials/Antler/code/CMakeFiles/pAntlerTestAppB.dir/build.make Docs/Essentials/Antler/code/CMakeFiles/pAntlerTestAppB.dir/build
@@ -290,8 +290,8 @@ clean: Docs/Essentials/Antler/code/CMakeFiles/pAntlerTestAppB.dir/clean
 # Target rules for target Docs/Essentials/Antler/code/CMakeFiles/pAntlerTestAppC.dir
 
 # All Build rule for target.
-Docs/Essentials/Antler/code/CMakeFiles/pAntlerTestAppC.dir/all: Core/MOOSLIB/CMakeFiles/MOOS.dir/all
 Docs/Essentials/Antler/code/CMakeFiles/pAntlerTestAppC.dir/all: Core/MOOSGenLib/CMakeFiles/MOOSGen.dir/all
+Docs/Essentials/Antler/code/CMakeFiles/pAntlerTestAppC.dir/all: Core/MOOSLIB/CMakeFiles/MOOS.dir/all
 Docs/Essentials/Antler/code/CMakeFiles/pAntlerTestAppC.dir/all: Essentials/MOOSUtilityLib/CMakeFiles/MOOSUtility.dir/all
 	$(MAKE) -f Docs/Essentials/Antler/code/CMakeFiles/pAntlerTestAppC.dir/build.make Docs/Essentials/Antler/code/CMakeFiles/pAntlerTestAppC.dir/depend
 	$(MAKE) -f Docs/Essentials/Antler/code/CMakeFiles/pAntlerTestAppC.dir/build.make Docs/Essentials/Antler/code/CMakeFiles/pAntlerTestAppC.dir/build
@@ -392,55 +392,55 @@ clean: Essentials/MOOSUtilityLib/CMakeFiles/MOOSUtility.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Directory level rules for directory Instruments/Ocean/iPH
+# Directory level rules for directory ipH
 
 # Convenience name for "all" pass in the directory.
-Instruments/Ocean/iPH/all: Instruments/Ocean/iPH/CMakeFiles/ipH.dir/all
-.PHONY : Instruments/Ocean/iPH/all
+ipH/all: ipH/CMakeFiles/ipH.dir/all
+.PHONY : ipH/all
 
 # Convenience name for "clean" pass in the directory.
-Instruments/Ocean/iPH/clean: Instruments/Ocean/iPH/CMakeFiles/ipH.dir/clean
-.PHONY : Instruments/Ocean/iPH/clean
+ipH/clean: ipH/CMakeFiles/ipH.dir/clean
+.PHONY : ipH/clean
 
 # Convenience name for "preinstall" pass in the directory.
-Instruments/Ocean/iPH/preinstall:
-.PHONY : Instruments/Ocean/iPH/preinstall
+ipH/preinstall:
+.PHONY : ipH/preinstall
 
 #=============================================================================
-# Target rules for target Instruments/Ocean/iPH/CMakeFiles/ipH.dir
+# Target rules for target ipH/CMakeFiles/ipH.dir
 
 # All Build rule for target.
-Instruments/Ocean/iPH/CMakeFiles/ipH.dir/all: Core/MOOSLIB/CMakeFiles/MOOS.dir/all
-Instruments/Ocean/iPH/CMakeFiles/ipH.dir/all: Core/MOOSGenLib/CMakeFiles/MOOSGen.dir/all
-Instruments/Ocean/iPH/CMakeFiles/ipH.dir/all: Essentials/MOOSUtilityLib/CMakeFiles/MOOSUtility.dir/all
-	$(MAKE) -f Instruments/Ocean/iPH/CMakeFiles/ipH.dir/build.make Instruments/Ocean/iPH/CMakeFiles/ipH.dir/depend
-	$(MAKE) -f Instruments/Ocean/iPH/CMakeFiles/ipH.dir/build.make Instruments/Ocean/iPH/CMakeFiles/ipH.dir/build
+ipH/CMakeFiles/ipH.dir/all: Core/MOOSGenLib/CMakeFiles/MOOSGen.dir/all
+ipH/CMakeFiles/ipH.dir/all: Core/MOOSLIB/CMakeFiles/MOOS.dir/all
+ipH/CMakeFiles/ipH.dir/all: Essentials/MOOSUtilityLib/CMakeFiles/MOOSUtility.dir/all
+	$(MAKE) -f ipH/CMakeFiles/ipH.dir/build.make ipH/CMakeFiles/ipH.dir/depend
+	$(MAKE) -f ipH/CMakeFiles/ipH.dir/build.make ipH/CMakeFiles/ipH.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/ogutu/MOOS/CMakeFiles  65
 	@echo "Built target ipH"
-.PHONY : Instruments/Ocean/iPH/CMakeFiles/ipH.dir/all
+.PHONY : ipH/CMakeFiles/ipH.dir/all
 
 # Include target in all.
-all: Instruments/Ocean/iPH/CMakeFiles/ipH.dir/all
+all: ipH/CMakeFiles/ipH.dir/all
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-Instruments/Ocean/iPH/CMakeFiles/ipH.dir/rule: cmake_check_build_system
+ipH/CMakeFiles/ipH.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/ogutu/MOOS/CMakeFiles 15
-	$(MAKE) -f CMakeFiles/Makefile2 Instruments/Ocean/iPH/CMakeFiles/ipH.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 ipH/CMakeFiles/ipH.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/ogutu/MOOS/CMakeFiles 0
-.PHONY : Instruments/Ocean/iPH/CMakeFiles/ipH.dir/rule
+.PHONY : ipH/CMakeFiles/ipH.dir/rule
 
 # Convenience name for target.
-ipH: Instruments/Ocean/iPH/CMakeFiles/ipH.dir/rule
+ipH: ipH/CMakeFiles/ipH.dir/rule
 .PHONY : ipH
 
 # clean rule for target.
-Instruments/Ocean/iPH/CMakeFiles/ipH.dir/clean:
-	$(MAKE) -f Instruments/Ocean/iPH/CMakeFiles/ipH.dir/build.make Instruments/Ocean/iPH/CMakeFiles/ipH.dir/clean
-.PHONY : Instruments/Ocean/iPH/CMakeFiles/ipH.dir/clean
+ipH/CMakeFiles/ipH.dir/clean:
+	$(MAKE) -f ipH/CMakeFiles/ipH.dir/build.make ipH/CMakeFiles/ipH.dir/clean
+.PHONY : ipH/CMakeFiles/ipH.dir/clean
 
 # clean rule for target.
-clean: Instruments/Ocean/iPH/CMakeFiles/ipH.dir/clean
+clean: ipH/CMakeFiles/ipH.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -562,8 +562,8 @@ Core/MOOSDB/preinstall:
 # Target rules for target Core/MOOSDB/CMakeFiles/MOOSDB.dir
 
 # All Build rule for target.
-Core/MOOSDB/CMakeFiles/MOOSDB.dir/all: Core/MOOSLIB/CMakeFiles/MOOS.dir/all
 Core/MOOSDB/CMakeFiles/MOOSDB.dir/all: Core/MOOSGenLib/CMakeFiles/MOOSGen.dir/all
+Core/MOOSDB/CMakeFiles/MOOSDB.dir/all: Core/MOOSLIB/CMakeFiles/MOOS.dir/all
 Core/MOOSDB/CMakeFiles/MOOSDB.dir/all: Essentials/MOOSUtilityLib/CMakeFiles/MOOSUtility.dir/all
 	$(MAKE) -f Core/MOOSDB/CMakeFiles/MOOSDB.dir/build.make Core/MOOSDB/CMakeFiles/MOOSDB.dir/depend
 	$(MAKE) -f Core/MOOSDB/CMakeFiles/MOOSDB.dir/build.make Core/MOOSDB/CMakeFiles/MOOSDB.dir/build
@@ -644,8 +644,8 @@ Essentials/pMOOSBridge/preinstall:
 # Target rules for target Essentials/pMOOSBridge/CMakeFiles/pMOOSBridge.dir
 
 # All Build rule for target.
-Essentials/pMOOSBridge/CMakeFiles/pMOOSBridge.dir/all: Core/MOOSLIB/CMakeFiles/MOOS.dir/all
 Essentials/pMOOSBridge/CMakeFiles/pMOOSBridge.dir/all: Core/MOOSGenLib/CMakeFiles/MOOSGen.dir/all
+Essentials/pMOOSBridge/CMakeFiles/pMOOSBridge.dir/all: Core/MOOSLIB/CMakeFiles/MOOS.dir/all
 Essentials/pMOOSBridge/CMakeFiles/pMOOSBridge.dir/all: Essentials/MOOSUtilityLib/CMakeFiles/MOOSUtility.dir/all
 	$(MAKE) -f Essentials/pMOOSBridge/CMakeFiles/pMOOSBridge.dir/build.make Essentials/pMOOSBridge/CMakeFiles/pMOOSBridge.dir/depend
 	$(MAKE) -f Essentials/pMOOSBridge/CMakeFiles/pMOOSBridge.dir/build.make Essentials/pMOOSBridge/CMakeFiles/pMOOSBridge.dir/build
@@ -696,8 +696,8 @@ Essentials/pAntler/preinstall:
 # Target rules for target Essentials/pAntler/CMakeFiles/pAntler.dir
 
 # All Build rule for target.
-Essentials/pAntler/CMakeFiles/pAntler.dir/all: Core/MOOSLIB/CMakeFiles/MOOS.dir/all
 Essentials/pAntler/CMakeFiles/pAntler.dir/all: Core/MOOSGenLib/CMakeFiles/MOOSGen.dir/all
+Essentials/pAntler/CMakeFiles/pAntler.dir/all: Core/MOOSLIB/CMakeFiles/MOOS.dir/all
 Essentials/pAntler/CMakeFiles/pAntler.dir/all: Essentials/MOOSUtilityLib/CMakeFiles/MOOSUtility.dir/all
 	$(MAKE) -f Essentials/pAntler/CMakeFiles/pAntler.dir/build.make Essentials/pAntler/CMakeFiles/pAntler.dir/depend
 	$(MAKE) -f Essentials/pAntler/CMakeFiles/pAntler.dir/build.make Essentials/pAntler/CMakeFiles/pAntler.dir/build
@@ -748,8 +748,8 @@ Essentials/pLogger/preinstall:
 # Target rules for target Essentials/pLogger/CMakeFiles/pLogger.dir
 
 # All Build rule for target.
-Essentials/pLogger/CMakeFiles/pLogger.dir/all: Core/MOOSLIB/CMakeFiles/MOOS.dir/all
 Essentials/pLogger/CMakeFiles/pLogger.dir/all: Core/MOOSGenLib/CMakeFiles/MOOSGen.dir/all
+Essentials/pLogger/CMakeFiles/pLogger.dir/all: Core/MOOSLIB/CMakeFiles/MOOS.dir/all
 Essentials/pLogger/CMakeFiles/pLogger.dir/all: Essentials/MOOSUtilityLib/CMakeFiles/MOOSUtility.dir/all
 	$(MAKE) -f Essentials/pLogger/CMakeFiles/pLogger.dir/build.make Essentials/pLogger/CMakeFiles/pLogger.dir/depend
 	$(MAKE) -f Essentials/pLogger/CMakeFiles/pLogger.dir/build.make Essentials/pLogger/CMakeFiles/pLogger.dir/build
@@ -800,8 +800,8 @@ Essentials/pScheduler/preinstall:
 # Target rules for target Essentials/pScheduler/CMakeFiles/pScheduler.dir
 
 # All Build rule for target.
-Essentials/pScheduler/CMakeFiles/pScheduler.dir/all: Core/MOOSLIB/CMakeFiles/MOOS.dir/all
 Essentials/pScheduler/CMakeFiles/pScheduler.dir/all: Core/MOOSGenLib/CMakeFiles/MOOSGen.dir/all
+Essentials/pScheduler/CMakeFiles/pScheduler.dir/all: Core/MOOSLIB/CMakeFiles/MOOS.dir/all
 Essentials/pScheduler/CMakeFiles/pScheduler.dir/all: Essentials/MOOSUtilityLib/CMakeFiles/MOOSUtility.dir/all
 	$(MAKE) -f Essentials/pScheduler/CMakeFiles/pScheduler.dir/build.make Essentials/pScheduler/CMakeFiles/pScheduler.dir/depend
 	$(MAKE) -f Essentials/pScheduler/CMakeFiles/pScheduler.dir/build.make Essentials/pScheduler/CMakeFiles/pScheduler.dir/build
@@ -902,10 +902,10 @@ NavigationAndControl/pNav/preinstall:
 # Target rules for target NavigationAndControl/pNav/CMakeFiles/pNav.dir
 
 # All Build rule for target.
-NavigationAndControl/pNav/CMakeFiles/pNav.dir/all: Core/MOOSLIB/CMakeFiles/MOOS.dir/all
-NavigationAndControl/pNav/CMakeFiles/pNav.dir/all: Thirdparty/newmat/CMakeFiles/newmat.dir/all
-NavigationAndControl/pNav/CMakeFiles/pNav.dir/all: NavigationAndControl/MOOSNavLib/CMakeFiles/MOOSNav.dir/all
 NavigationAndControl/pNav/CMakeFiles/pNav.dir/all: Core/MOOSGenLib/CMakeFiles/MOOSGen.dir/all
+NavigationAndControl/pNav/CMakeFiles/pNav.dir/all: Core/MOOSLIB/CMakeFiles/MOOS.dir/all
+NavigationAndControl/pNav/CMakeFiles/pNav.dir/all: NavigationAndControl/MOOSNavLib/CMakeFiles/MOOSNav.dir/all
+NavigationAndControl/pNav/CMakeFiles/pNav.dir/all: Thirdparty/newmat/CMakeFiles/newmat.dir/all
 NavigationAndControl/pNav/CMakeFiles/pNav.dir/all: Essentials/MOOSUtilityLib/CMakeFiles/MOOSUtility.dir/all
 	$(MAKE) -f NavigationAndControl/pNav/CMakeFiles/pNav.dir/build.make NavigationAndControl/pNav/CMakeFiles/pNav.dir/depend
 	$(MAKE) -f NavigationAndControl/pNav/CMakeFiles/pNav.dir/build.make NavigationAndControl/pNav/CMakeFiles/pNav.dir/build
@@ -1006,10 +1006,10 @@ NavigationAndControl/pHelm/preinstall:
 # Target rules for target NavigationAndControl/pHelm/CMakeFiles/pHelm.dir
 
 # All Build rule for target.
-NavigationAndControl/pHelm/CMakeFiles/pHelm.dir/all: NavigationAndControl/MOOSTaskLib/CMakeFiles/MOOSTask.dir/all
-NavigationAndControl/pHelm/CMakeFiles/pHelm.dir/all: Core/MOOSLIB/CMakeFiles/MOOS.dir/all
-NavigationAndControl/pHelm/CMakeFiles/pHelm.dir/all: Thirdparty/newmat/CMakeFiles/newmat.dir/all
 NavigationAndControl/pHelm/CMakeFiles/pHelm.dir/all: Core/MOOSGenLib/CMakeFiles/MOOSGen.dir/all
+NavigationAndControl/pHelm/CMakeFiles/pHelm.dir/all: Core/MOOSLIB/CMakeFiles/MOOS.dir/all
+NavigationAndControl/pHelm/CMakeFiles/pHelm.dir/all: NavigationAndControl/MOOSTaskLib/CMakeFiles/MOOSTask.dir/all
+NavigationAndControl/pHelm/CMakeFiles/pHelm.dir/all: Thirdparty/newmat/CMakeFiles/newmat.dir/all
 NavigationAndControl/pHelm/CMakeFiles/pHelm.dir/all: Essentials/MOOSUtilityLib/CMakeFiles/MOOSUtility.dir/all
 	$(MAKE) -f NavigationAndControl/pHelm/CMakeFiles/pHelm.dir/build.make NavigationAndControl/pHelm/CMakeFiles/pHelm.dir/depend
 	$(MAKE) -f NavigationAndControl/pHelm/CMakeFiles/pHelm.dir/build.make NavigationAndControl/pHelm/CMakeFiles/pHelm.dir/build
@@ -1060,8 +1060,8 @@ NavigationAndControl/iRemote/preinstall:
 # Target rules for target NavigationAndControl/iRemote/CMakeFiles/iRemote.dir
 
 # All Build rule for target.
-NavigationAndControl/iRemote/CMakeFiles/iRemote.dir/all: Core/MOOSLIB/CMakeFiles/MOOS.dir/all
 NavigationAndControl/iRemote/CMakeFiles/iRemote.dir/all: Core/MOOSGenLib/CMakeFiles/MOOSGen.dir/all
+NavigationAndControl/iRemote/CMakeFiles/iRemote.dir/all: Core/MOOSLIB/CMakeFiles/MOOS.dir/all
 NavigationAndControl/iRemote/CMakeFiles/iRemote.dir/all: Essentials/MOOSUtilityLib/CMakeFiles/MOOSUtility.dir/all
 	$(MAKE) -f NavigationAndControl/iRemote/CMakeFiles/iRemote.dir/build.make NavigationAndControl/iRemote/CMakeFiles/iRemote.dir/depend
 	$(MAKE) -f NavigationAndControl/iRemote/CMakeFiles/iRemote.dir/build.make NavigationAndControl/iRemote/CMakeFiles/iRemote.dir/build
@@ -1130,10 +1130,10 @@ Tools/Graphical/uMS/preinstall:
 # Target rules for target Tools/Graphical/uMS/CMakeFiles/uMS.dir
 
 # All Build rule for target.
-Tools/Graphical/uMS/CMakeFiles/uMS.dir/all: Core/MOOSLIB/CMakeFiles/MOOS.dir/all
 Tools/Graphical/uMS/CMakeFiles/uMS.dir/all: Core/MOOSGenLib/CMakeFiles/MOOSGen.dir/all
-Tools/Graphical/uMS/CMakeFiles/uMS.dir/all: Thirdparty/FLTKVW/CMakeFiles/fltkvw.dir/all
+Tools/Graphical/uMS/CMakeFiles/uMS.dir/all: Core/MOOSLIB/CMakeFiles/MOOS.dir/all
 Tools/Graphical/uMS/CMakeFiles/uMS.dir/all: Essentials/MOOSUtilityLib/CMakeFiles/MOOSUtility.dir/all
+Tools/Graphical/uMS/CMakeFiles/uMS.dir/all: Thirdparty/FLTKVW/CMakeFiles/fltkvw.dir/all
 	$(MAKE) -f Tools/Graphical/uMS/CMakeFiles/uMS.dir/build.make Tools/Graphical/uMS/CMakeFiles/uMS.dir/depend
 	$(MAKE) -f Tools/Graphical/uMS/CMakeFiles/uMS.dir/build.make Tools/Graphical/uMS/CMakeFiles/uMS.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/ogutu/MOOS/CMakeFiles  88 89
@@ -1183,10 +1183,10 @@ Tools/Graphical/uPlayBack/preinstall:
 # Target rules for target Tools/Graphical/uPlayBack/CMakeFiles/uPlayBack.dir
 
 # All Build rule for target.
-Tools/Graphical/uPlayBack/CMakeFiles/uPlayBack.dir/all: Core/MOOSLIB/CMakeFiles/MOOS.dir/all
 Tools/Graphical/uPlayBack/CMakeFiles/uPlayBack.dir/all: Core/MOOSGenLib/CMakeFiles/MOOSGen.dir/all
-Tools/Graphical/uPlayBack/CMakeFiles/uPlayBack.dir/all: Thirdparty/FLTKVW/CMakeFiles/fltkvw.dir/all
+Tools/Graphical/uPlayBack/CMakeFiles/uPlayBack.dir/all: Core/MOOSLIB/CMakeFiles/MOOS.dir/all
 Tools/Graphical/uPlayBack/CMakeFiles/uPlayBack.dir/all: Essentials/MOOSUtilityLib/CMakeFiles/MOOSUtility.dir/all
+Tools/Graphical/uPlayBack/CMakeFiles/uPlayBack.dir/all: Thirdparty/FLTKVW/CMakeFiles/fltkvw.dir/all
 	$(MAKE) -f Tools/Graphical/uPlayBack/CMakeFiles/uPlayBack.dir/build.make Tools/Graphical/uPlayBack/CMakeFiles/uPlayBack.dir/depend
 	$(MAKE) -f Tools/Graphical/uPlayBack/CMakeFiles/uPlayBack.dir/build.make Tools/Graphical/uPlayBack/CMakeFiles/uPlayBack.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/ogutu/MOOS/CMakeFiles  98 99
@@ -1266,9 +1266,9 @@ Tools/Simulation/Ocean/uMVS/preinstall:
 # Target rules for target Tools/Simulation/Ocean/uMVS/CMakeFiles/uMVS.dir
 
 # All Build rule for target.
+Tools/Simulation/Ocean/uMVS/CMakeFiles/uMVS.dir/all: Core/MOOSGenLib/CMakeFiles/MOOSGen.dir/all
 Tools/Simulation/Ocean/uMVS/CMakeFiles/uMVS.dir/all: Core/MOOSLIB/CMakeFiles/MOOS.dir/all
 Tools/Simulation/Ocean/uMVS/CMakeFiles/uMVS.dir/all: Thirdparty/newmat/CMakeFiles/newmat.dir/all
-Tools/Simulation/Ocean/uMVS/CMakeFiles/uMVS.dir/all: Core/MOOSGenLib/CMakeFiles/MOOSGen.dir/all
 Tools/Simulation/Ocean/uMVS/CMakeFiles/uMVS.dir/all: Essentials/MOOSUtilityLib/CMakeFiles/MOOSUtility.dir/all
 	$(MAKE) -f Tools/Simulation/Ocean/uMVS/CMakeFiles/uMVS.dir/build.make Tools/Simulation/Ocean/uMVS/CMakeFiles/uMVS.dir/depend
 	$(MAKE) -f Tools/Simulation/Ocean/uMVS/CMakeFiles/uMVS.dir/build.make Tools/Simulation/Ocean/uMVS/CMakeFiles/uMVS.dir/build
@@ -1334,8 +1334,8 @@ Tools/Console/uPoke/preinstall:
 # Target rules for target Tools/Console/uPoke/CMakeFiles/uPoke.dir
 
 # All Build rule for target.
-Tools/Console/uPoke/CMakeFiles/uPoke.dir/all: Core/MOOSLIB/CMakeFiles/MOOS.dir/all
 Tools/Console/uPoke/CMakeFiles/uPoke.dir/all: Core/MOOSGenLib/CMakeFiles/MOOSGen.dir/all
+Tools/Console/uPoke/CMakeFiles/uPoke.dir/all: Core/MOOSLIB/CMakeFiles/MOOS.dir/all
 Tools/Console/uPoke/CMakeFiles/uPoke.dir/all: Essentials/MOOSUtilityLib/CMakeFiles/MOOSUtility.dir/all
 	$(MAKE) -f Tools/Console/uPoke/CMakeFiles/uPoke.dir/build.make Tools/Console/uPoke/CMakeFiles/uPoke.dir/depend
 	$(MAKE) -f Tools/Console/uPoke/CMakeFiles/uPoke.dir/build.make Tools/Console/uPoke/CMakeFiles/uPoke.dir/build
@@ -1437,8 +1437,8 @@ Instruments/Common/iGPS/preinstall:
 # Target rules for target Instruments/Common/iGPS/CMakeFiles/iGPS.dir
 
 # All Build rule for target.
-Instruments/Common/iGPS/CMakeFiles/iGPS.dir/all: Core/MOOSLIB/CMakeFiles/MOOS.dir/all
 Instruments/Common/iGPS/CMakeFiles/iGPS.dir/all: Core/MOOSGenLib/CMakeFiles/MOOSGen.dir/all
+Instruments/Common/iGPS/CMakeFiles/iGPS.dir/all: Core/MOOSLIB/CMakeFiles/MOOS.dir/all
 Instruments/Common/iGPS/CMakeFiles/iGPS.dir/all: Essentials/MOOSUtilityLib/CMakeFiles/MOOSUtility.dir/all
 	$(MAKE) -f Instruments/Common/iGPS/CMakeFiles/iGPS.dir/build.make Instruments/Common/iGPS/CMakeFiles/iGPS.dir/depend
 	$(MAKE) -f Instruments/Common/iGPS/CMakeFiles/iGPS.dir/build.make Instruments/Common/iGPS/CMakeFiles/iGPS.dir/build
@@ -1489,8 +1489,8 @@ Instruments/Ocean/iActuation/preinstall:
 # Target rules for target Instruments/Ocean/iActuation/CMakeFiles/iActuation.dir
 
 # All Build rule for target.
-Instruments/Ocean/iActuation/CMakeFiles/iActuation.dir/all: Core/MOOSLIB/CMakeFiles/MOOS.dir/all
 Instruments/Ocean/iActuation/CMakeFiles/iActuation.dir/all: Core/MOOSGenLib/CMakeFiles/MOOSGen.dir/all
+Instruments/Ocean/iActuation/CMakeFiles/iActuation.dir/all: Core/MOOSLIB/CMakeFiles/MOOS.dir/all
 Instruments/Ocean/iActuation/CMakeFiles/iActuation.dir/all: Essentials/MOOSUtilityLib/CMakeFiles/MOOSUtility.dir/all
 	$(MAKE) -f Instruments/Ocean/iActuation/CMakeFiles/iActuation.dir/build.make Instruments/Ocean/iActuation/CMakeFiles/iActuation.dir/depend
 	$(MAKE) -f Instruments/Ocean/iActuation/CMakeFiles/iActuation.dir/build.make Instruments/Ocean/iActuation/CMakeFiles/iActuation.dir/build
@@ -1541,8 +1541,8 @@ Instruments/Ocean/iCompass/preinstall:
 # Target rules for target Instruments/Ocean/iCompass/CMakeFiles/iCompass.dir
 
 # All Build rule for target.
-Instruments/Ocean/iCompass/CMakeFiles/iCompass.dir/all: Core/MOOSLIB/CMakeFiles/MOOS.dir/all
 Instruments/Ocean/iCompass/CMakeFiles/iCompass.dir/all: Core/MOOSGenLib/CMakeFiles/MOOSGen.dir/all
+Instruments/Ocean/iCompass/CMakeFiles/iCompass.dir/all: Core/MOOSLIB/CMakeFiles/MOOS.dir/all
 Instruments/Ocean/iCompass/CMakeFiles/iCompass.dir/all: Essentials/MOOSUtilityLib/CMakeFiles/MOOSUtility.dir/all
 	$(MAKE) -f Instruments/Ocean/iCompass/CMakeFiles/iCompass.dir/build.make Instruments/Ocean/iCompass/CMakeFiles/iCompass.dir/depend
 	$(MAKE) -f Instruments/Ocean/iCompass/CMakeFiles/iCompass.dir/build.make Instruments/Ocean/iCompass/CMakeFiles/iCompass.dir/build
@@ -1593,8 +1593,8 @@ Instruments/Ocean/iDVL/preinstall:
 # Target rules for target Instruments/Ocean/iDVL/CMakeFiles/iDVL.dir
 
 # All Build rule for target.
-Instruments/Ocean/iDVL/CMakeFiles/iDVL.dir/all: Core/MOOSLIB/CMakeFiles/MOOS.dir/all
 Instruments/Ocean/iDVL/CMakeFiles/iDVL.dir/all: Core/MOOSGenLib/CMakeFiles/MOOSGen.dir/all
+Instruments/Ocean/iDVL/CMakeFiles/iDVL.dir/all: Core/MOOSLIB/CMakeFiles/MOOS.dir/all
 Instruments/Ocean/iDVL/CMakeFiles/iDVL.dir/all: Essentials/MOOSUtilityLib/CMakeFiles/MOOSUtility.dir/all
 	$(MAKE) -f Instruments/Ocean/iDVL/CMakeFiles/iDVL.dir/build.make Instruments/Ocean/iDVL/CMakeFiles/iDVL.dir/depend
 	$(MAKE) -f Instruments/Ocean/iDVL/CMakeFiles/iDVL.dir/build.make Instruments/Ocean/iDVL/CMakeFiles/iDVL.dir/build
@@ -1645,8 +1645,8 @@ Instruments/Ocean/iINS/preinstall:
 # Target rules for target Instruments/Ocean/iINS/CMakeFiles/iINS.dir
 
 # All Build rule for target.
-Instruments/Ocean/iINS/CMakeFiles/iINS.dir/all: Core/MOOSLIB/CMakeFiles/MOOS.dir/all
 Instruments/Ocean/iINS/CMakeFiles/iINS.dir/all: Core/MOOSGenLib/CMakeFiles/MOOSGen.dir/all
+Instruments/Ocean/iINS/CMakeFiles/iINS.dir/all: Core/MOOSLIB/CMakeFiles/MOOS.dir/all
 Instruments/Ocean/iINS/CMakeFiles/iINS.dir/all: Essentials/MOOSUtilityLib/CMakeFiles/MOOSUtility.dir/all
 	$(MAKE) -f Instruments/Ocean/iINS/CMakeFiles/iINS.dir/build.make Instruments/Ocean/iINS/CMakeFiles/iINS.dir/depend
 	$(MAKE) -f Instruments/Ocean/iINS/CMakeFiles/iINS.dir/build.make Instruments/Ocean/iINS/CMakeFiles/iINS.dir/build
@@ -1697,8 +1697,8 @@ Instruments/Ocean/iJanitor/preinstall:
 # Target rules for target Instruments/Ocean/iJanitor/CMakeFiles/iJanitor.dir
 
 # All Build rule for target.
-Instruments/Ocean/iJanitor/CMakeFiles/iJanitor.dir/all: Core/MOOSLIB/CMakeFiles/MOOS.dir/all
 Instruments/Ocean/iJanitor/CMakeFiles/iJanitor.dir/all: Core/MOOSGenLib/CMakeFiles/MOOSGen.dir/all
+Instruments/Ocean/iJanitor/CMakeFiles/iJanitor.dir/all: Core/MOOSLIB/CMakeFiles/MOOS.dir/all
 Instruments/Ocean/iJanitor/CMakeFiles/iJanitor.dir/all: Essentials/MOOSUtilityLib/CMakeFiles/MOOSUtility.dir/all
 	$(MAKE) -f Instruments/Ocean/iJanitor/CMakeFiles/iJanitor.dir/build.make Instruments/Ocean/iJanitor/CMakeFiles/iJanitor.dir/depend
 	$(MAKE) -f Instruments/Ocean/iJanitor/CMakeFiles/iJanitor.dir/build.make Instruments/Ocean/iJanitor/CMakeFiles/iJanitor.dir/build
@@ -1749,8 +1749,8 @@ Instruments/Ocean/iLBL/preinstall:
 # Target rules for target Instruments/Ocean/iLBL/CMakeFiles/iLBL.dir
 
 # All Build rule for target.
-Instruments/Ocean/iLBL/CMakeFiles/iLBL.dir/all: Core/MOOSLIB/CMakeFiles/MOOS.dir/all
 Instruments/Ocean/iLBL/CMakeFiles/iLBL.dir/all: Core/MOOSGenLib/CMakeFiles/MOOSGen.dir/all
+Instruments/Ocean/iLBL/CMakeFiles/iLBL.dir/all: Core/MOOSLIB/CMakeFiles/MOOS.dir/all
 Instruments/Ocean/iLBL/CMakeFiles/iLBL.dir/all: Essentials/MOOSUtilityLib/CMakeFiles/MOOSUtility.dir/all
 	$(MAKE) -f Instruments/Ocean/iLBL/CMakeFiles/iLBL.dir/build.make Instruments/Ocean/iLBL/CMakeFiles/iLBL.dir/depend
 	$(MAKE) -f Instruments/Ocean/iLBL/CMakeFiles/iLBL.dir/build.make Instruments/Ocean/iLBL/CMakeFiles/iLBL.dir/build
@@ -1801,8 +1801,8 @@ Instruments/Ocean/iDepth/preinstall:
 # Target rules for target Instruments/Ocean/iDepth/CMakeFiles/iDepth.dir
 
 # All Build rule for target.
-Instruments/Ocean/iDepth/CMakeFiles/iDepth.dir/all: Core/MOOSLIB/CMakeFiles/MOOS.dir/all
 Instruments/Ocean/iDepth/CMakeFiles/iDepth.dir/all: Core/MOOSGenLib/CMakeFiles/MOOSGen.dir/all
+Instruments/Ocean/iDepth/CMakeFiles/iDepth.dir/all: Core/MOOSLIB/CMakeFiles/MOOS.dir/all
 Instruments/Ocean/iDepth/CMakeFiles/iDepth.dir/all: Essentials/MOOSUtilityLib/CMakeFiles/MOOSUtility.dir/all
 	$(MAKE) -f Instruments/Ocean/iDepth/CMakeFiles/iDepth.dir/build.make Instruments/Ocean/iDepth/CMakeFiles/iDepth.dir/depend
 	$(MAKE) -f Instruments/Ocean/iDepth/CMakeFiles/iDepth.dir/build.make Instruments/Ocean/iDepth/CMakeFiles/iDepth.dir/build
@@ -1853,8 +1853,8 @@ Instruments/Ocean/iRelay/preinstall:
 # Target rules for target Instruments/Ocean/iRelay/CMakeFiles/iRelay.dir
 
 # All Build rule for target.
-Instruments/Ocean/iRelay/CMakeFiles/iRelay.dir/all: Core/MOOSLIB/CMakeFiles/MOOS.dir/all
 Instruments/Ocean/iRelay/CMakeFiles/iRelay.dir/all: Core/MOOSGenLib/CMakeFiles/MOOSGen.dir/all
+Instruments/Ocean/iRelay/CMakeFiles/iRelay.dir/all: Core/MOOSLIB/CMakeFiles/MOOS.dir/all
 Instruments/Ocean/iRelay/CMakeFiles/iRelay.dir/all: Essentials/MOOSUtilityLib/CMakeFiles/MOOSUtility.dir/all
 	$(MAKE) -f Instruments/Ocean/iRelay/CMakeFiles/iRelay.dir/build.make Instruments/Ocean/iRelay/CMakeFiles/iRelay.dir/depend
 	$(MAKE) -f Instruments/Ocean/iRelay/CMakeFiles/iRelay.dir/build.make Instruments/Ocean/iRelay/CMakeFiles/iRelay.dir/build
@@ -1905,8 +1905,8 @@ Docs/ProgrammingWithMOOS/code/Ex1/preinstall:
 # Target rules for target Docs/ProgrammingWithMOOS/code/Ex1/CMakeFiles/Ex1.dir
 
 # All Build rule for target.
-Docs/ProgrammingWithMOOS/code/Ex1/CMakeFiles/Ex1.dir/all: Core/MOOSLIB/CMakeFiles/MOOS.dir/all
 Docs/ProgrammingWithMOOS/code/Ex1/CMakeFiles/Ex1.dir/all: Core/MOOSGenLib/CMakeFiles/MOOSGen.dir/all
+Docs/ProgrammingWithMOOS/code/Ex1/CMakeFiles/Ex1.dir/all: Core/MOOSLIB/CMakeFiles/MOOS.dir/all
 Docs/ProgrammingWithMOOS/code/Ex1/CMakeFiles/Ex1.dir/all: Essentials/MOOSUtilityLib/CMakeFiles/MOOSUtility.dir/all
 	$(MAKE) -f Docs/ProgrammingWithMOOS/code/Ex1/CMakeFiles/Ex1.dir/build.make Docs/ProgrammingWithMOOS/code/Ex1/CMakeFiles/Ex1.dir/depend
 	$(MAKE) -f Docs/ProgrammingWithMOOS/code/Ex1/CMakeFiles/Ex1.dir/build.make Docs/ProgrammingWithMOOS/code/Ex1/CMakeFiles/Ex1.dir/build
@@ -1957,8 +1957,8 @@ Docs/ProgrammingWithMOOS/code/Ex2/preinstall:
 # Target rules for target Docs/ProgrammingWithMOOS/code/Ex2/CMakeFiles/Ex2.dir
 
 # All Build rule for target.
-Docs/ProgrammingWithMOOS/code/Ex2/CMakeFiles/Ex2.dir/all: Core/MOOSLIB/CMakeFiles/MOOS.dir/all
 Docs/ProgrammingWithMOOS/code/Ex2/CMakeFiles/Ex2.dir/all: Core/MOOSGenLib/CMakeFiles/MOOSGen.dir/all
+Docs/ProgrammingWithMOOS/code/Ex2/CMakeFiles/Ex2.dir/all: Core/MOOSLIB/CMakeFiles/MOOS.dir/all
 Docs/ProgrammingWithMOOS/code/Ex2/CMakeFiles/Ex2.dir/all: Essentials/MOOSUtilityLib/CMakeFiles/MOOSUtility.dir/all
 	$(MAKE) -f Docs/ProgrammingWithMOOS/code/Ex2/CMakeFiles/Ex2.dir/build.make Docs/ProgrammingWithMOOS/code/Ex2/CMakeFiles/Ex2.dir/depend
 	$(MAKE) -f Docs/ProgrammingWithMOOS/code/Ex2/CMakeFiles/Ex2.dir/build.make Docs/ProgrammingWithMOOS/code/Ex2/CMakeFiles/Ex2.dir/build
@@ -2009,8 +2009,8 @@ Docs/ProgrammingWithMOOS/code/Ex3/preinstall:
 # Target rules for target Docs/ProgrammingWithMOOS/code/Ex3/CMakeFiles/Ex3.dir
 
 # All Build rule for target.
-Docs/ProgrammingWithMOOS/code/Ex3/CMakeFiles/Ex3.dir/all: Core/MOOSLIB/CMakeFiles/MOOS.dir/all
 Docs/ProgrammingWithMOOS/code/Ex3/CMakeFiles/Ex3.dir/all: Core/MOOSGenLib/CMakeFiles/MOOSGen.dir/all
+Docs/ProgrammingWithMOOS/code/Ex3/CMakeFiles/Ex3.dir/all: Core/MOOSLIB/CMakeFiles/MOOS.dir/all
 Docs/ProgrammingWithMOOS/code/Ex3/CMakeFiles/Ex3.dir/all: Essentials/MOOSUtilityLib/CMakeFiles/MOOSUtility.dir/all
 	$(MAKE) -f Docs/ProgrammingWithMOOS/code/Ex3/CMakeFiles/Ex3.dir/build.make Docs/ProgrammingWithMOOS/code/Ex3/CMakeFiles/Ex3.dir/depend
 	$(MAKE) -f Docs/ProgrammingWithMOOS/code/Ex3/CMakeFiles/Ex3.dir/build.make Docs/ProgrammingWithMOOS/code/Ex3/CMakeFiles/Ex3.dir/build
@@ -2061,8 +2061,8 @@ Docs/ProgrammingWithMOOS/code/Ex4/preinstall:
 # Target rules for target Docs/ProgrammingWithMOOS/code/Ex4/CMakeFiles/Ex4.dir
 
 # All Build rule for target.
-Docs/ProgrammingWithMOOS/code/Ex4/CMakeFiles/Ex4.dir/all: Core/MOOSLIB/CMakeFiles/MOOS.dir/all
 Docs/ProgrammingWithMOOS/code/Ex4/CMakeFiles/Ex4.dir/all: Core/MOOSGenLib/CMakeFiles/MOOSGen.dir/all
+Docs/ProgrammingWithMOOS/code/Ex4/CMakeFiles/Ex4.dir/all: Core/MOOSLIB/CMakeFiles/MOOS.dir/all
 Docs/ProgrammingWithMOOS/code/Ex4/CMakeFiles/Ex4.dir/all: Essentials/MOOSUtilityLib/CMakeFiles/MOOSUtility.dir/all
 	$(MAKE) -f Docs/ProgrammingWithMOOS/code/Ex4/CMakeFiles/Ex4.dir/build.make Docs/ProgrammingWithMOOS/code/Ex4/CMakeFiles/Ex4.dir/depend
 	$(MAKE) -f Docs/ProgrammingWithMOOS/code/Ex4/CMakeFiles/Ex4.dir/build.make Docs/ProgrammingWithMOOS/code/Ex4/CMakeFiles/Ex4.dir/build
@@ -2113,8 +2113,8 @@ Docs/ProgrammingWithMOOS/code/MOOSBinaryMessaging/preinstall:
 # Target rules for target Docs/ProgrammingWithMOOS/code/MOOSBinaryMessaging/CMakeFiles/binary_comms_example.dir
 
 # All Build rule for target.
-Docs/ProgrammingWithMOOS/code/MOOSBinaryMessaging/CMakeFiles/binary_comms_example.dir/all: Core/MOOSLIB/CMakeFiles/MOOS.dir/all
 Docs/ProgrammingWithMOOS/code/MOOSBinaryMessaging/CMakeFiles/binary_comms_example.dir/all: Core/MOOSGenLib/CMakeFiles/MOOSGen.dir/all
+Docs/ProgrammingWithMOOS/code/MOOSBinaryMessaging/CMakeFiles/binary_comms_example.dir/all: Core/MOOSLIB/CMakeFiles/MOOS.dir/all
 Docs/ProgrammingWithMOOS/code/MOOSBinaryMessaging/CMakeFiles/binary_comms_example.dir/all: Essentials/MOOSUtilityLib/CMakeFiles/MOOSUtility.dir/all
 	$(MAKE) -f Docs/ProgrammingWithMOOS/code/MOOSBinaryMessaging/CMakeFiles/binary_comms_example.dir/build.make Docs/ProgrammingWithMOOS/code/MOOSBinaryMessaging/CMakeFiles/binary_comms_example.dir/depend
 	$(MAKE) -f Docs/ProgrammingWithMOOS/code/MOOSBinaryMessaging/CMakeFiles/binary_comms_example.dir/build.make Docs/ProgrammingWithMOOS/code/MOOSBinaryMessaging/CMakeFiles/binary_comms_example.dir/build

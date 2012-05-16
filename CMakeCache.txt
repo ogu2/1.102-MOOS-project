@@ -19,7 +19,7 @@ ALLOW_RELEASE_ASSERTS:BOOL=FALSE
 
 //Specify other directories you want to include in the build (semicolon
 // separated list)
-ALSO_BUILD:STRING=Instruments/Ocean/iPH
+ALSO_BUILD:STRING=ipH
 
 //Value Computed by CMake
 AntlerTestApps_BINARY_DIR:STATIC=/home/ogutu/MOOS/Docs/Essentials/Antler/code
@@ -642,10 +642,10 @@ iRemote_BINARY_DIR:STATIC=/home/ogutu/MOOS/NavigationAndControl/iRemote
 iRemote_SOURCE_DIR:STATIC=/home/ogutu/MOOS/NavigationAndControl/iRemote
 
 //Value Computed by CMake
-ipH_BINARY_DIR:STATIC=/home/ogutu/MOOS/Instruments/Ocean/iPH
+ipH_BINARY_DIR:STATIC=/home/ogutu/MOOS/ipH
 
 //Value Computed by CMake
-ipH_SOURCE_DIR:STATIC=/home/ogutu/MOOS/Instruments/Ocean/iPH
+ipH_SOURCE_DIR:STATIC=/home/ogutu/MOOS/ipH
 
 //Value Computed by CMake
 newmat_BINARY_DIR:STATIC=/home/ogutu/MOOS/Thirdparty/newmat
@@ -847,7 +847,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_LOCAL_GENERATORS:INTERNAL=50
+CMAKE_NUMBER_OF_LOCAL_GENERATORS:INTERNAL=51
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
