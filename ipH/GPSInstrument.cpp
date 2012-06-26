@@ -149,7 +149,7 @@ bool CGPSInstrument::InitialiseSensor()
 }
 
 //here x is the value whose y is to be approximated
-double CGPSInstrument::LinearApproximator(double yLower, double yUpper, double xLower, double xUpper, double x){
+double LinearApproximator(double yLower, double yUpper, double xLower, double xUpper, double x){
 	//simple y=mx linear approximator
 	return ((x-xLower)*((yUpper-yLower)/(xUpper-xLower)) +yLower);
 }
@@ -185,14 +185,52 @@ bool CGPSInstrument::GetData()
         /*these will help to quickly identify vars
          *rather than using numbers
          */
-        const int myvar=0;
+
+        /*IMPORTANT:
+         * Data obtained from calibration
+         */
+        //set calibration data here
+        double batt_lower_Voltage=0, batt_lower_arduino=30,
+        		batt_upper_Voltage=12, batt_upper_arduino=500,
+        		press_lower_Pascals=2.0, press_lower_arduino=0,
+        		press_upper_Pascals=30, press_upper_arduino=400;
+        //end of calibration
+
+        //for pH
+        const int myPH=0, myPressure=1, myBatt=2;
 
         const string sWhatcopy=sWhat;
         //expecting comma sepatated values from arduino
         mysplit(sWhatcopy, ",", tokens);
 
 		if(tokens.size()>1){
-			SetMOOSVar("",tokens[myvar],dfTimeNow);
+			double approx_depth=0, approx_pressure=0, approx_batt=0;
+			SetMOOSVar("pH",tokens[myPH],dfTimeNow);
+
+			//convert pressure data to usable format
+			char y_charted [tokens[myPressure].length()];
+			for(int i=0; i<tokens[myPressure].length(); i++){
+				y_charted[i]=tokens[myPressure][i];
+			}
+			double y=atof(y_charted);
+			approx_pressure=LinearApproximator(press_lower_Pascals,press_upper_Pascals,press_lower_arduino,press_upper_arduino,y);
+
+			SetMOOSVar("Pressure",approx_pressure,dfTimeNow);
+
+			//use pressure to approximate depth
+			double rho=1000, g=9.8;
+			approx_depth=approx_pressure/(rho*g);	//simple depth approximation with P_gauge (i.e. P_atm=0)
+			SetMOOSVar("Depth",approx_depth,dfTimeNow);
+
+			//convert battery data to usable format
+			char yb_charted [tokens[myBatt].length()];
+			for(int i=0; i<tokens[myBatt].length(); i++){
+				yb_charted[i]=tokens[myBatt][i];
+			}
+			double yBatt=atof(yb_charted);
+			approx_batt=LinearApproximator(batt_lower_Voltage,batt_upper_Voltage,batt_lower_arduino,batt_upper_arduino,yBatt);
+
+			SetMOOSVar("Battery",approx_batt,dfTimeNow);
 
 		}
 		else{

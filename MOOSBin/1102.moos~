@@ -11,9 +11,10 @@ ProcessConfig = ANTLER
 	//this next line sets the executable paths explicitly
 	ExecutablePath = /home/ogutu/MOOS/MOOSBin
 	
-	Run = iGPS @ NewConsole = TRUE
-	Run = pLogger @ NewConsole = TRUE
+	//Run = iGPS @ NewConsole = TRUE
+	//Run = pLogger @ NewConsole = TRUE
 	Run = uMS @ NewConsole = TRUE
+	Run = ipH @ NewConsole = TRUE	
 	MSBetweenLaunches = 2000
    
 }
@@ -89,7 +90,13 @@ ProcessConfig = iGPS
 	CombineMessages = FALSE
 	
 }
+ProcessConfig = ipH
+{
+	PORT = /dev/ttyUSB0
+	BAUDRATE = 115200
+}
 
 ProcessConfig = uMS
 {
+	//nothing here for now
 }

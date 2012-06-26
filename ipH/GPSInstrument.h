@@ -42,7 +42,7 @@ protected:
     bool InitialiseSensor();
     bool Iterate();
     void mysplit(const std::string & str, const std::string & delim, std::vector<std::string>& result);
-    double CGPSInstrument::LinearApproximator(double yLower, double yUpper, double xLower, double xUpper, double x);
+    //double CGPSInstrument::LinearApproximator(double yLower, double yUpper, double xLower, double xUpper, double x);
     bool OnNewMail(MOOSMSG_LIST &NewMail);
     bool OnConnectToServer();
     bool OnStartUp();    
