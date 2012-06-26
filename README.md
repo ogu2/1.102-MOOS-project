@@ -5,4 +5,6 @@ This is all the modified code for the 2011-2011 Spring term 1.102 project at MIT
 
 ###Contact
 email me at:
+
 	 david ogutu (one word) at gmail point com
+
